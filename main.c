@@ -259,10 +259,11 @@ int main( void )
 	}
 }*/
 
+#include <stdio.h>
 #include <stddef.h>
 #include <stdlib.h>
 
-size_t str_len( const char *str )
+size_t stringlen( const char *str )
 {
 	size_t result = 0;
 
@@ -272,7 +273,7 @@ size_t str_len( const char *str )
 	return result + 1;
 }
 
-void str_cpy( char *restrict dest, const char *restrict src, size_t len )
+void stringcpy( char *restrict dest, const char *restrict src, size_t len )
 {
 	for (size_t i = 0; i < len; i++)
     {
@@ -300,29 +301,57 @@ String String_new( const size_t inital_size )
 	return result;
 }
 
-void String_append( SM_String *restrict dest, SM_String *restrict addendum )
+void String_ensure_size( String *str, size_t size )
 {
-	String_ensure_size(dest, dest->len + addendum->len + 1);
-
-	strcpy(&dest->str[dest->len], addendum->str, addendum->len + 1);
-
-	dest->len += addendum->len;
+	while (str->size < size)
+		str->size *= 2;
+	
+    str->str = realloc(str->str, str->size);
 }
 
-void String_clear( SM_String *str )
+void String_append( String *dest, char *addendum )
+{
+	size_t add_len = stringlen(addendum);
+	
+	String_ensure_size(dest, dest->len + add_len);
+
+	stringcpy(&dest->str[dest->len], addendum, add_len);
+
+	dest->len += add_len;
+}
+
+void String_clear( String *str )
 {
 	free(str->str);
 	str->len = 0;
 	str->size = 0;
 }
 
+void String_debug( String *str )
+{
+	printf("stringdbg:\tstr  %p\n\t\tlen  %lu\n\t\tsize %lu\n",
+		str->str, str->len, str->size);
+	printf("content: {\n");
+
+	for (size_t i = 0; i < str->size; i++)
+	{
+		printf("\t\t%c %i\n", str->str[i], str->str[i]);
+	}
+
+	printf("}\n");
+}
+
 int main( void )
 {
-	Struct intro = String_new(20);
-	String_append("Hello World,");
-	String_append(" i am a string.");
+	String intro = String_new(20);
+	String_append(&intro, "Hello World,");
+String_debug(&intro);
+	String_append(&intro, " i am a string.");
+String_debug(&intro);
 	
 	printf("%s\n", intro.str);
+String_debug(&intro);
+	String_clear(&intro);
 }
 
 
