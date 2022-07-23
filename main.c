@@ -103,14 +103,14 @@ int a = 1;
 		case 101:
 		my_number/=2;
 		break;}
-*/
 
-	//printf("f: %f\n", floatadd(0.1, 0.4));
+
+	printf("f: %f\n", floatadd(0.1, 0.4));
 
 void intptr( int* ptr )
 {
 	*ptr = 6;
-}
+}*/
 
 /*
 	int myint = 1;
@@ -259,6 +259,7 @@ int main( void )
 	}
 }*/
 
+/*
 #include <stdio.h>
 #include <stddef.h>
 #include <stdlib.h>
@@ -352,14 +353,84 @@ String_debug(&intro);
 	printf("%s\n", intro.str);
 String_debug(&intro);
 	String_clear(&intro);
+}*/
+
+/*
+#include <stdio.h>
+
+int main( void )
+{
+	long int li = 10000000000;
+	int i = li;
+
+	printf("%li to %i\n", li, i);
+}*/
+/*
+#include <stdio.h>
+
+int addi( int a, int b )
+{
+	return a + b;
 }
 
+float addf( float a, float b )
+{
+	return a + b;
+}
 
+#define add(A, B) _Generic((A) + (B), \
+	int: addi, \
+	float: addf)(A, B)
 
+int main ( void )
+{
+	int a1 = 1, b1 = 2, c1;
+	float a2 = 1.1, b2 = 1.5, c2;
 
+	c1 = add(a1, b1);
+	c2 = add(a2, b2);
 
+	printf("%i %f\n", c1, c2);
+}*/
 
+#include <stdio.h>
+#include <string.h>
 
+void reverse1(const char *src, char* dest, unsigned int len)
+{
+	for (unsigned int i = 0; i < len; i++)
+	{
+		dest[i] = src[len - i - 1];
+	}
+
+	dest[len] = '\0';
+}
+
+void reverse2(char *str)
+{
+	unsigned int len = strlen(str);
+	
+	for (unsigned int i = 0; i < len / 2; i++)
+	{
+		char temp = str[i];
+		str[i] = str[len - i - 1];
+		str[len - i - 1] = temp;
+	}
+}
+
+int main( void )
+{
+	char *str1 = "Hello World";
+	char str2[16];
+
+	reverse1(str1, str2, strlen(str1));
+
+	printf("%s\n%s\n", str1, str2);
+
+	reverse2(str1);
+
+	printf("%s\n%s\n", str1, str2);
+}
 
 
 
