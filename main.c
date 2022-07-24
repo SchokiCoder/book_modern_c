@@ -241,23 +241,46 @@ int main( void )
 	printf("%u flipped to %i\n", unflipped, flipped);
 }*/
 
+
 /*
 #include <stdio.h>
 
 #define HELLOWORLD_LEN 11
-#define PRINT_LEN HELLOWORLD_LEN + 2
+#define PRINT_LEN (HELLOWORLD_LEN + 4)
 
 int main( void )
 {
-	char arrtext[HELLOWORLD_LEN] = "Hello World";
-	char *ptrtext = "Hello World";
+	char temp[4] = {'\0'};
+
+	char arrfit[HELLOWORLD_LEN] = "Hello World";
+	char arrmore[HELLOWORLD_LEN + 2] = "Hello World";
+	const char *ptr = "Hello World";
+
+	//print all string values
+	printf("char | arrfit | arrmore | ptr\n");
 	
 	for (unsigned int i = 0; i < PRINT_LEN; i++)
 	{
-		printf("%1c: %3i vs %1c: %3i\n",
-			arrtext[i], arrtext[i], ptrtext[i], ptrtext[i]);
+		if (arrfit[i] == arrmore[i] &&
+			arrmore[i] == ptr[i])
+		{
+			temp[0] = '\'';
+			temp[1] = arrfit[i];
+			temp[2] = '\'';
+			temp[3] = '\0';
+		}
+		else
+		{
+			temp[0] = 'N';
+			temp[1] = 'A';
+			temp[2] = '\0';
+		}
+
+		printf("%4s | %6i | %7i | %4i\n",
+			temp, arrfit[i], arrmore[i], ptr[i]);
 	}
 }*/
+
 
 /*
 #include <stdio.h>
@@ -355,6 +378,7 @@ String_debug(&intro);
 	String_clear(&intro);
 }*/
 
+
 /*
 #include <stdio.h>
 
@@ -365,6 +389,8 @@ int main( void )
 
 	printf("%li to %i\n", li, i);
 }*/
+
+
 /*
 #include <stdio.h>
 
@@ -393,6 +419,8 @@ int main ( void )
 	printf("%i %f\n", c1, c2);
 }*/
 
+
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -420,19 +448,36 @@ void reverse2(char *str)
 
 int main( void )
 {
-	char *str1 = "Hello World";
+	char str1[16] = "Hello World";
 	char str2[16];
 
 	reverse1(str1, str2, strlen(str1));
 
-	printf("%s\n%s\n", str1, str2);
+	printf("method 1: \"%s\" copy to \"%s\"\n", str1, str2);
 
 	reverse2(str1);
 
-	printf("%s\n%s\n", str1, str2);
+	printf("method 2: \"%s\"\n", str1);
+}*/
+
+
+/*
+#include <stdio.h>
+
+int a = 2, c = 0;
+
+int triple( int b )
+{
+	a *= 3;
+	return a;
 }
 
+int main( void )
+{
+	c = triple(a);
 
+	printf("a: %i c: %i\n", a, c);
+}*/
 
 
 
