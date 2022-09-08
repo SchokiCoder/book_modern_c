@@ -23,9 +23,14 @@ int a = 1;
 	}
 */
 
-	/*int a = 2147483647;
-	printf("%i\n", a);*/
+/*
+#include <stdio.h>
 
+int main() {
+	short a = 2147483647;
+	printf("%i\n", a);
+}
+*/
 
 	/*int sum = add(10, 5);
 	printf("%i\n", sum);*/
@@ -478,6 +483,69 @@ int main( void )
 
 	printf("a: %i c: %i\n", a, c);
 }*/
+
+/*
+#include <stdio.h>
+
+int main()
+{
+	printf("%d\n", 10.0);
+}*/
+
+/*
+int main()
+{
+	int a = 10, b = 2;
+	
+	start:
+	
+	if (a == 10)
+		a = 0;
+	
+	if (b == 2)
+	{
+		b++;
+		goto start;
+	}
+	
+	return 0;
+}
+*/
+
+#include <stdio.h>
+#include <string.h>
+
+#define BUF_MAXLEN 20
+
+char buffer[BUF_MAXLEN];
+char password[BUF_MAXLEN] = "andyspword";
+
+int main(int argc, char **argv)
+{
+	if (argc != 3)
+	{
+		printf("Please provide a password and a secret\n");
+		return 0;
+	}
+	
+	strcpy(buffer, argv[2]);
+	
+	if (strcmp(argv[1], password) == 0)
+		printf("My darkest secret is %s\n", buffer);
+	else
+		printf("Password incorrect\n");
+	
+	return 0;
+}
+
+
+
+
+
+
+
+
+
 
 
 
