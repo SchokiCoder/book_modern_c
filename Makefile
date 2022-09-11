@@ -1,2 +1,2 @@
 build:
-	cc main.c -o main -ansi
+	cc main.c -o main -Wall -Wextra
