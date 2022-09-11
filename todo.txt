@@ -1,0 +1,12 @@
+{
+	-requirements add					v_11-34_11-09-2022
+	"editor with syntax highlighting"
+	-syntax highlighting				.
+		-til conditions						cur_progress
+	-fancy cover page					.
+	-proofreading						.
+	-security							.
+	-add debugger to requirements		.
+	-debugging							.
+	-2nd edition						.
+}
