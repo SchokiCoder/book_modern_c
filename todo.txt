@@ -5,17 +5,15 @@
 	-sort code                          v_10-38
 	-fancy cover page					v_10-45
 	-add debugger to requirements		v_11-00
-	-debugging							.
+	-debugging							v_15-54
 	 (add before standards part)
-	-makefiles                          .
+	-makefiles                          v_16-17
 	 (add somewhat earlier)
-	-security							.
 	
 	-proofreading						.
 	-resolve comments                   .
 	-update index                       .
 	-make sure index didn't get bugged  .
 	-README.md                          .
-	-rename repo to match title         .
-	-2nd edition						.
+	-add code to release, 2nd edition	.
 }
