@@ -1,2 +1,2 @@
 build:
-	cc main.c -o main -Wall -Wextra
+	cd "code/17_debugging" && make

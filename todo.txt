@@ -1,12 +1,21 @@
 {
 	-requirements add					v_11-34_11-09-2022
 	"editor with syntax highlighting"
-	-syntax highlighting				.
-		-til "Casting"						cur_progress
-	-fancy cover page					.
-	-proofreading						.
-	-security							.
-	-add debugger to requirements		.
+	-syntax highlighting				v_09-45_12-09-2022
+	-sort code                          v_10-38
+	-fancy cover page					v_10-45
+	-add debugger to requirements		v_11-00
 	-debugging							.
+	 (add before standards part)
+	-makefiles                          .
+	 (add somewhat earlier)
+	-security							.
+	
+	-proofreading						.
+	-resolve comments                   .
+	-update index                       .
+	-make sure index didn't get bugged  .
+	-README.md                          .
+	-rename repo to match title         .
 	-2nd edition						.
 }
