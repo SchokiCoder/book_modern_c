@@ -1,4 +1,4 @@
-all: 4_functions
+all: functions
 
-4_functions:
-	cc "$@.c" -o "../binaries/$@" -g -Wall -Wextra
+functions:
+	cc "$@.c" -o "$@" -g -Wall -Wextra

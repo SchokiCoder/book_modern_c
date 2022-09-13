@@ -1,7 +1,7 @@
-all: variables constants
+all: messenger improved
 
-variables:
+messenger:
 	cc "$@.c" -o "$@" -g -Wall -Wextra
 
-constants:
+improved:
 	cc "$@.c" -o "$@" -g -Wall -Wextra

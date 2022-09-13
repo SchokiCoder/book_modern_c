@@ -1,7 +1,7 @@
-all: variables constants
+all: evil-goto c-strings
 
-variables:
+evil-goto:
 	cc "$@.c" -o "$@" -g -Wall -Wextra
 
-constants:
+c-strings:
 	cc "$@.c" -o "$@" -g -Wall -Wextra

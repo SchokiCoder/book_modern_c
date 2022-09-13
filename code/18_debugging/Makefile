@@ -1,7 +1,7 @@
-all: 36_faulty-code 37_correct-code
+all: faulty-code correct-code
 
-36_faulty-code:
-	cc "$@.c" "faulty_string.c" "string_utils.c" -o "../binaries/$@" -g -Wall -Wextra
+faulty-code:
+	cc "$@.c" "faulty_string.c" "string_utils.c" -o "$@" -g -Wall -Wextra
 
-37_correct-code:
-	cc "$@.c" "correct_string.c" "string_utils.c" -o "../binaries/$@" -g -Wall -Wextra
+correct-code:
+	cc "$@.c" "correct_string.c" "string_utils.c" -o "$@" -g -Wall -Wextra

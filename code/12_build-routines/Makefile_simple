@@ -1,5 +1,0 @@
-debug:
-	cc myfirst.c mysecond.c -o myapp -std=c99 -Wall -Wextra -pedantic -g
-
-release:
-	cc myfirst.c mysecond.c -o myapp -std=c99 -Wall -Wextra -pedantic -O3

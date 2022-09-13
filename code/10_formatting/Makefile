@@ -1,7 +1,7 @@
-all: variables constants
+all: sane insane
 
-variables:
+sane:
 	cc "$@.c" -o "$@" -g -Wall -Wextra
 
-constants:
+insane:
 	cc "$@.c" -o "$@" -g -Wall -Wextra

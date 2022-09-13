@@ -1,7 +1,7 @@
-all: variables constants
+all: increment_basic increment_return
 
-variables:
+increment_basic:
 	cc "$@.c" -o "$@" -g -Wall -Wextra
 
-constants:
+increment_return:
 	cc "$@.c" -o "$@" -g -Wall -Wextra

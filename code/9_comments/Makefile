@@ -1,7 +1,7 @@
-all: variables constants
+all: comments genius
 
-variables:
+comments:
 	cc "$@.c" -o "$@" -g -Wall -Wextra
 
-constants:
+genius:
 	cc "$@.c" -o "$@" -g -Wall -Wextra
