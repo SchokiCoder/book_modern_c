@@ -1,6 +1,6 @@
 #include <stdbool.h>
 
-int main( )
+int main( void )
 {
     bool my_first_bool = false;
 }

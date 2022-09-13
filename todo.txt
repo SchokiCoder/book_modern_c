@@ -9,6 +9,12 @@
 	 (add before standards part)
 	-makefiles                          v_16-17
 	 (add somewhat earlier)
+	-add make to requirements           v_09-54_13-09-2022
+	 and hammer home that this book is
+	 for linux mainly
+	-mention code snippets that are     v_10-02
+	 shipped from now on
+	-rest of the makefiles              .
 	
 	-proofreading						.
 	-resolve comments                   .

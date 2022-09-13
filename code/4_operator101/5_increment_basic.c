@@ -1,3 +1,6 @@
-int num = 0;
-num++;
-++num;
+int main( void )
+{
+    int num = 0;
+    num++;
+    ++num;
+}

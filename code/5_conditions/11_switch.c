@@ -1,20 +1,23 @@
-int num = 0;
-
-switch (num)
+int main( void )
 {
-    case 0:
-        num = 1;
-        break;
+    int num = 0;
 
-    case 1:
-        num = 6;
-        break;
+    switch (num)
+    {
+        case 0:
+            num = 1;
+            break;
 
-    case 43:
-        num = 9;
-        break;
+        case 1:
+            num = 6;
+            break;
 
-    default:
-        num = 0;
-        break;
+        case 43:
+            num = 9;
+            break;
+
+        default:
+            num = 0;
+            break;
+    }
 }

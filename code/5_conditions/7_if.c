@@ -1,11 +1,14 @@
-int num = 0;
-
-if (num != 1)
+int main( void )
 {
-    num = 1;
-}
+    int num = 0;
 
-if (num == 1)
-{
-    num = 0;
+    if (num != 1)
+    {
+        num = 1;
+    }
+
+    if (num == 1)
+    {
+        num = 0;
+    }
 }
