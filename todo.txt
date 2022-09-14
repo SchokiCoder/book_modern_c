@@ -16,12 +16,9 @@
 	 shipped from now on
 	-rest of the makefiles              v_21-48
 	
-	-proofreading						.
-	    -currently                          include
-	-add page number                    .
-	-resolve comments                   .
-	-update index                       .
-	-make sure index didn't get bugged  .
-	-README.md                          .
-	-add code to release, 2nd edition	.
+	-proofreading						v_13-59_14-09-2022
+	-update index and                   v_14-03
+	 make sure index didn't get bugged
+	-README.md                          v_14-08
+	-add code to release, 2nd edition	v_14-12
 }
