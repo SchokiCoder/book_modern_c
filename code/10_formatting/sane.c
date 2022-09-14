@@ -25,7 +25,7 @@ int main( void )
             break;
             
         case 23:
-            // explicit check needed
+            // explicit check needed for reason X
             if (num_even)
                 num_err = true;
             break;

@@ -14,9 +14,11 @@
 	 for linux mainly
 	-mention code snippets that are     v_10-02
 	 shipped from now on
-	-rest of the makefiles              .
+	-rest of the makefiles              v_21-48
 	
 	-proofreading						.
+	    -currently                          include
+	-add page number                    .
 	-resolve comments                   .
 	-update index                       .
 	-make sure index didn't get bugged  .

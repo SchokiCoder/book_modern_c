@@ -4,11 +4,11 @@ int main( void )
 
     switch (num)
     {
-        case 0:
-            num = 1;
+        case 68:
+            num++;
             break;
 
-        case 1:
+        case 101:
             num = 6;
             break;
 
