@@ -1,3 +1,49 @@
+3rd edition {
+ 	-memory, please: fix typo "work" -> "works"	v
+ 	-comments: fix typo "print" -> "printf"		v
+ 	-namespaces: improve wording of first sentence	v
+ 	
+	-collect tasks					.
+	
+	-comments					.
+		-improve wording for balance statement		.
+		 (end of page 27)
+		-about the possibility of them getting		.
+		 outdated
+		-where they are commonly used			.
+		 function documentation
+		 file documentation
+		 code segment doc
+		-add sort of "it's best to write code that	.
+		 documents itself"
+		 (keeping functions small, so that their name
+		  unmistakably tells what the code does)
+	
+	-formatting					.
+		-examples: add fallthrough with comment		.
+		 and without comment on negative one
+		-positive example: remove double indent		.
+		 of cases
+		-"too bad this is worthless." ->		.
+		 "too bad it's not worth it at all."
+		-add mention of linux and freebsd code styles	.
+		 "worth to check out"
+	
+	-optional end topics: add namespaces		.
+	 and file-scope
+	
+	-memory, please					.
+		-the little song thingy				.
+		 The stdlib doesn't really give runtime
+		 stability in the context of memory allocation.
+		 The song implies this however.
+		 Rephrase song or add "i lied lol u use c,
+		 there is no hope >:)".
+
+	-relicense under ccsa				?
+	-set edition to "3rd"				.
+}
+
 {
 	-requirements add					v_11-34_11-09-2022
 	"editor with syntax highlighting"
