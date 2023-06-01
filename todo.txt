@@ -2,22 +2,32 @@
  	-memory, please: fix typo "work" -> "works"	v
  	-comments: fix typo "print" -> "printf"		v
  	-namespaces: improve wording of first sentence	v
- 	
-	-collect tasks					.
 	
-	-comments					.
-		-improve wording for balance statement		.
+	-fix makefile in types and variables		v
+	
+	-comments					v
+		-improve wording for balance statement		v
 		 (end of page 27)
-		-about the possibility of them getting		.
-		 outdated
-		-where they are commonly used			.
+		-add where comments are commonly used		v
 		 function documentation
 		 file documentation
 		 code segment doc
-		-add sort of "it's best to write code that	.
-		 documents itself"
+		-add info about the possibility of them		v
+		 getting outdated
+		-add how to not write comments			v
 		 (keeping functions small, so that their name
 		  unmistakably tells what the code does)
+	
+	-syntax highlighter 2 changed and now my code	?
+	 style is gone
+	 how to proceed:
+	 - rewrite in markdown, cus this sucks
+	 - reselect and reapply a code style to ALL listings
+	
+	-add makefiles move binaries to code/bin/	.
+	-add clean to makefiles				.
+	-gitignore only code/bin/*			.
+	-is code/2/char.c missing?			.
 	
 	-formatting					.
 		-examples: add fallthrough with comment		.
@@ -38,9 +48,12 @@
 		 stability in the context of memory allocation.
 		 The song implies this however.
 		 Rephrase song or add "i lied lol u use c,
-		 there is no hope >:)".
+		 there is no hope :P".
+
+	-collect todos					.
 
 	-relicense under ccsa				?
+	-update index					.
 	-set edition to "3rd"				.
 }
 
