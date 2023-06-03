@@ -23,7 +23,8 @@
 	  my code style is gone)
 	-compare to find differences			.
 	-delete odt file				.
-	-reformat code to linux code style		.
+	-change code style to linux			.
+	-formatting: set opinionated code style to gnu	.
 	-rewrite sections that mention			.
 	 source code lines numbers
 
@@ -39,11 +40,15 @@
 		 of cases
 		-"too bad this is worthless." ->		.
 		 "too bad it's not worth it at all."
-		-add mention of linux and freebsd code styles	.
+		-add mention of freebsd and gnu code styles	.
 		 "worth to check out"
 	
 	-optional end topics: add namespaces		.
 	 and file-scope
+	-optional end topics: add advanced makefile	.
+	 syntax
+	 (branches depending on ther branches, $@, $^)
+	 
 	
 	-memory, please					.
 		-the little song thingy				.

@@ -12,3 +12,5 @@
 - [Simple text](./7_simple-text.md)
 - [Arrays](./8_arrays.md)
 - [Comments](./9_comments.md)
+- [Formatting](./10_formatting.md)
+- [Build routines](./11_build-routines.md)
