@@ -16,18 +16,21 @@
 		 getting outdated
 		-add how to not write comments			v
 		 (keeping functions small, so that their name
-		  unmistakably tells what the code does)
-	
-	-syntax highlighter 2 changed and now my code	?
-	 style is gone
-	 how to proceed:
-	 - rewrite in markdown, cus this sucks
-	 - reselect and reapply a code style to ALL listings
-	
+		  unmistakably tells what the code does)	
+
+	-rewrite in markdown, cus this sucks		.
+	 (syntax highlighter 2 changed and now
+	  my code style is gone)
+	-compare to find differences			.
+	-delete odt file				.
+	-reformat code to linux code style		.
+	-rewrite sections that mention			.
+	 source code lines numbers
+
 	-add makefiles move binaries to code/bin/	.
 	-add clean to makefiles				.
 	-gitignore only code/bin/*			.
-	-is code/2/char.c missing?			.
+	-is code/types and variables/char.c missing?	.
 	
 	-formatting					.
 		-examples: add fallthrough with comment		.
@@ -50,9 +53,8 @@
 		 Rephrase song or add "i lied lol u use c,
 		 there is no hope :P".
 
-	-collect todos					.
-
 	-relicense under ccsa				?
+	-update license in readme.md			?
 	-update index					.
 	-set edition to "3rd"				.
 }
