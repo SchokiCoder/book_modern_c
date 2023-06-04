@@ -21,3 +21,8 @@
 - [Enumerators](./16_enums.md)
 - [Casting](./17_casting.md)
 - [Errors are friends, not food](./18_errors.md)
+- [Debugging](./19_debugging.md)
+- [Professionals have standards](./20_standards.md)
+- [Roads to Rome](./21_roads.md)
+- [Optional end topics](./22_optional.md)
+- [What happens now?](./whatnow.md)

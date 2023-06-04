@@ -33,6 +33,8 @@
 	 """... the keyword `struct`..."""
 	-remove typedefs as default from code		.
 	 (mind structures where its wanted)
+	-rename code '-' to '_'				.
+	 mind the filename references in debugging
 
 	-add makefiles move binaries to code/bin/	.
 	-add clean to makefiles				.
