@@ -27,6 +27,12 @@
 	-formatting: set opinionated code style to gnu	.
 	-rewrite sections that mention			.
 	 source code lines numbers
+	-change code references from quote to md code	.
+	 instead of writing
+	 """... the keyword "struct"..."""
+	 """... the keyword `struct`..."""
+	-remove typedefs as default from code		.
+	 (mind structures where its wanted)
 
 	-add makefiles move binaries to code/bin/	.
 	-add clean to makefiles				.
@@ -48,6 +54,7 @@
 	-optional end topics: add advanced makefile	.
 	 syntax
 	 (branches depending on ther branches, $@, $^)
+	-optional end topics: single header files	.
 	 
 	
 	-memory, please					.

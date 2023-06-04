@@ -3,16 +3,16 @@ void draw( int red, int green, int blue )
     // draw somehow
 }
 
-typedef enum Color
+enum Color
 {
     C_RED,
     C_GREEN,
     C_BLUE,
-} Color ;
+};
 
 int main( void )
 {
-    Color bg_color = C_GREEN;
+    enum Color bg_color = C_GREEN;
 
     switch (bg_color)
     {
