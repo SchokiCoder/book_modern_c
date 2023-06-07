@@ -13,8 +13,8 @@ something like that. Rather, there are hundreds, so don't fret over which one to
 pick, because i recommend you just use Ubuntu or Linux-Mint. They are good for
 beginners, definitively enough for the purposes of this book and are
 DEBIAN-BASED:  
-<https://linuxmint.com/download.php>
-<https://ubuntu.com/desktop>
+<https://linuxmint.com/download.php>  
+<https://ubuntu.com/desktop>  
   
 Still not? Alright okay. If you are interested in programming, i can only
 recommend it though.  
@@ -31,13 +31,15 @@ What you need at the very least is a compiler.
 On Linux that would be gcc for example, available via your package manager. In
 most cases it should already be installed. Try `gcc` in terminal, if the
 output is something like:  
-```
-gcc: fatal error: no input files
-```
-then you have it. If not try the following commands:  
-- Debian and Debian-based: `sudo apt install gcc`
-- Arch and Arch-based: `sudo pacman -S gcc`
-- Fedora and RHEL-based: `sudo dnf install gcc`
+`gcc: fatal error: no input files`  
+then you have it. If not try the following commands (depending on your operating
+system):  
+
+| operating system        | command                |
+|-------------------------|------------------------|
+| Debian and Debian-based | `sudo apt install gcc` |
+| Arch and Arch-based:    | `sudo pacman -S gcc`   |
+| Fedora and RHEL-based:  | `sudo dnf install gcc` |
 
 ### Windows
 
@@ -81,8 +83,7 @@ already in your party. If not, you know the package-manager-drill.
 
 There is a good chance "gdb" comes packed with "mingw" / "Cygwin" already. If
 that is not the case, then get it from the internet. Since you are a grown
-adult, that committed to a path _(against my recommendation)_, you can also do
-the heavy lifting.  
+adult, that committed to a path, you can also do the heavy lifting.  
 
 ## Make
 

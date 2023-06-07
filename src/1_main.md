@@ -3,15 +3,13 @@
 This is where the real game begins or rather your programs logic.  
 To start programming create a new file and call it “main.c”.  
   
-The following is a "listing" or snippets. The numbers to the left are
-line-numbers and they help keep track of what happens where. They are just a
-visual tool and not part of the code. Now make a "main.c" file and type the
+The following is a "listing" or "snippet". Now make a "main.c" file and type the
 following code into it:  
 ```c
 {{ #include ../code/1_main/barebones.c }}
 ```
 
-These are the things pretty much every C program has at minimum.  
+This is what pretty much every C program has at minimum.  
   
 So lets begin at the top, there you will see “int” which is a type. After that
 “main” is the name of the function. The brackets { } show what is in that

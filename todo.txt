@@ -18,9 +18,18 @@
 		 (keeping functions small, so that their name
 		  unmistakably tells what the code does)	
 
-	-rewrite in markdown, cus this sucks		.
+	-rewrite in markdown, cus this sucks		v
 	 (syntax highlighter 2 changed and now
 	  my code style is gone)
+	-types and variables: add better int overflow	v
+	 explanation
+	-types and variables: fix incorrect signed int	v
+	 explanation
+	 This is CATASTROPHIC, how could this happen
+	 to me!? Good thing my target audience has not
+	 yet been fooled by my amateurish mistake.
+	-check this again just in case			.
+
 	-compare to find differences			.
 	-delete odt file				.
 	-change code style to linux			.
@@ -35,6 +44,9 @@
 	 (mind structures where its wanted)
 	-rename code '-' to '_'				.
 	 mind the filename references in debugging
+	-add favicon					?
+	 from old cover i guess
+	-add link to git repo to mdbook settings?	.
 
 	-add makefiles move binaries to code/bin/	.
 	-add clean to makefiles				.
