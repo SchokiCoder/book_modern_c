@@ -149,7 +149,7 @@ With that in mind we can now answer the question:
 ```c
 a = 2147483648;
 ```
-resulting in 'a' being -2147483648 on 'SpecialMachine'?"  
+resulting in 'a' being -2147483648 on my machine?"  
   
 Because the bits flip over and accidentally activate the sign flag.  
 See 2147483647 + 1:  
@@ -168,7 +168,7 @@ different range.
 
 Floats are used to store fractions.  
 There are two types: "float" and "double".  
-Double having double the size of a float and with that can store twice the
+Double having double the size of a float and with that it can store twice the
 precision.  
 What exactly i mean by precision is covered later.  
   
@@ -180,10 +180,10 @@ float my_float = 22.05;
 
 ### Char
 
-I kind of lied when i said char is just a number. It technically is but there is
-more to it. In C the char is also used to represent textual characters. Char has
-a range of 256 different values it can represent and those numbers are used as a
-character. That means the following line:  
+I kind of lied when i said char is _just_ a number. It technically is but there
+is more to it. In C the char is also used to represent textual characters. Char
+has a range of 256 different values it can represent and those numbers are used
+as a character. That means the following line:  
 ```c
 char an_a = 'a';
 ```

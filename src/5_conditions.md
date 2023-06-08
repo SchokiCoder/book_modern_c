@@ -15,10 +15,11 @@ it is not already, otherwise it should become zero:
 {{ #include ../code/5_conditions/if.c }}
 ```
 
-"num" is set to zero, then in line 03 we check if "num" is not equal to one.  
+"num" is set to zero, then with `!=` we check if "num" is **not** equal to
+one.  
 Since zero and one are not equal, this will execute and "num" is now 1  
 but we have a problem.  
-In line 08 it is checked to be equal to 1 and as a result set back to 0.  
+With `num == 1` it is checked to be equal to 1 and as a result set back to 0.  
   
 "So how can we check these two cases, without setting 'num' to 1 and back to
 0?"  
@@ -63,7 +64,7 @@ conditions are no exception for that. If we now have to check if "num" is 68,
 Much better to write and read. Use switches when appropriate and with care.
 Every case must be ended with "break" if you want to do just one thing. If the
 break is not set, then the next case will run as well. So forgetting the break
-statement in one case, you can prepare for a fallout of unintended variable
+statement in one case, you can prepare for the fallout of unintended variable
 manipulations down the line. The "default" branch works like the "else" branch
 in an if-chain.  
 
@@ -107,11 +108,11 @@ have special operators.
 {{ #include ../code/5_conditions/logical.c }}
 ```
 
-In line 15 we check if "num" is 23 AND check if "num_even" is true. In line 20
-we check if that boolean is false.  
+With the second `if` we check if "num" is 23 AND check if "num_even" is true.
+With the third `if` we check if that boolean is false.  
 
 | Operator with Example | Effect           |
 |-----------------------|------------------|
 | a && b                | is a and b true? |
-| a || b                | is a or b true?  |
+| a \|\| b              | is a or b true?  |
 | !a                    | is a not true?   |

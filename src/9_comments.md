@@ -1,11 +1,12 @@
 # Comments
 
 Comments are very important.  
-The difference between readable code and obfuscated nonsense is the usage of
+The difference between readable code and obfuscated nonsense can be the usage of
 comments.  
 A beginner might falsely assume that his exercise programs are very simplistic
 and can be understood instantly whenever needed. He is right, because his
 programs are a single file with 30 lines of code.  
+  
 In actual programs you will end up with multiple files or maybe even multiple
 directories with multiple files each, allowing the summarized line-count to
 climb into the millions.  
@@ -13,6 +14,7 @@ Everyone who knows the Linux kernel will know, that I am not hyperbolic about
 this.  
 Introducing a new member into the team and making him read this, is good way to
 make him run for his sanity.  
+  
 Comments are little notes that you put into your code. Optimally you use them in
 a way to describe what the upcoming section of code will do.  
 
@@ -23,10 +25,10 @@ a way to describe what the upcoming section of code will do.
 See in line 10 we have a "//" and then one quick statement on what the developer
 did here.  
 If you put a "//" in your line everything after that will be a comment. The
-compiler will not care what you say there.  
-You can also use "/*" to declare a whole section as a comment. Everything after
+compiler will not care what you type there.  
+You can also use "/\*" to declare a whole section as a comment. Everything after
 that, even spanning over multiple lines, is a comment. Just remember to close
-this comment with the complimentary "*/".  
+this comment with the complimentary "\*/".  
 Anyway, thanks to that comment we don't have to read the code and figure out
 what could happen there.  
 This saves a lot of time and should be used where necessary.  
@@ -40,6 +42,7 @@ potential reader.
 No one needs a refresher lesson in C every time they work with it. Everyone
 knows that + is used for adding two numbers or that the printf function actually
 prints text and where it comes from.  
+  
 As with many things in life, balance is the key. In this case, to keep your code
 free and sane and by extent the minds of your entire team.  
 
@@ -68,7 +71,7 @@ There is another solution for this...
 
 Yes, you can just delete 90% of your comments, assuming you write your program
 in a specific way.  
-If your symbols explain themselves, then no comments needed.  
+If your symbols explain themselves, then no comments are needed.  
 
 ```c
 {{ #include ../code/9_comments/self-explanatory.c }}
@@ -76,7 +79,8 @@ If your symbols explain themselves, then no comments needed.
 
 This is a simple example with just one extra function but shows what is
 important for the comment-less style.  
+  
 Keep your functions short and make them do just one thing.  
 Shorten variable names as much as possible but make them still reasonable.  
 At last, one comment is still left for the fall-through of the switch. This one
-needs to stay, to tell everyone that these fallthroughs are wanted.  
+needs to stay, to tell everyone that these fallthroughs are intentional.  

@@ -28,9 +28,11 @@
 	 This is CATASTROPHIC, how could this happen
 	 to me!? Good thing my target audience has not
 	 yet been fooled by my amateurish mistake.
-	-check this again just in case			.
+	-check this again just in case			v
 
 	-compare to find differences			.
+	 (progress: done with comments)
+
 	-delete odt file				.
 	-change code style to linux			.
 	-formatting: set opinionated code style to gnu	.
@@ -69,6 +71,7 @@
 	 syntax
 	 (branches depending on ther branches, $@, $^)
 	-optional end topics: single header files	.
+	-optional end topics: const vs #define		.
 	 
 	
 	-memory, please					.

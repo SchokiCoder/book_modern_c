@@ -11,13 +11,13 @@ a = a + 5;
 ```
 
 but writing it like this can get very tedious.  
-That's why we can and will also write like so:  
+That's why we can write it this way:  
 
 ```c
 a += 5;
 ```
 
-this is much more quick and very common and in fact works with every arithmetic
+This is much more quick and very common and in fact works with every arithmetic
 operator.  
   
 Here are all common arithmetic operators:  
@@ -42,7 +42,8 @@ but in practice this rarely comes up.
 {{ #include ../code/4_operators101/increment_basic.c }}
 ```
 
-Line 02 and 03 are both valid and do something slightly different.  
+Postfix (`a++`) and prefix (`++a`) are both valid and do something slightly
+different.  
 Every time you do increment "num" you also get the result returned. The
 difference is, that the result is returned either before or after incrementing
 or decrementing.  
@@ -51,9 +52,9 @@ or decrementing.
 {{ #include ../code/4_operators101/increment_return.c }}
 ```
 
-When the increment operator is on the right side like in line 02, then we first
+When the increment operator is on the right side (postfix), then we first
 assign the value of "num" to "before" and then increment "num". If the operator
-is on the right side it's done the other way around.  
+is on the left side (prefix) it's done the other way around.  
 So after this, this is how all variables look like:  
 num : 2  
 before : 0  
