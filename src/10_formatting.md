@@ -1,10 +1,12 @@
 # Formatting
 
-The little brother of comments, here to help all programmers or the author of
+The little brother of comments, here to help all programmers and the author of
 the code himself reading said code.  
+  
 Formatting and comments are the most important things in the realm of
 programming. If nobody is able to read your code, no one will want to work with
 you. Given enough time, not even you yourself.  
+  
 I hope i can make my point clear, when quickly demonstrating that:  
 
 ```c
@@ -20,9 +22,10 @@ So let's look at the same code but obfuscated.
 ```
 
 That the readability is making a nosedive here is hopefully not up to debate.
-The formatting is a violation against the geneva-convention, variable names
-are... there, unlike comments. Well at least it decreased the line-count, too
-bad this is worthless.  
+Just to name a _few_ issues, the case order is a mess, variable names are...
+there, unlike comments. Well at least it decreased the line-count, too bad this
+is not worth the price.  
+  
 Of course there is also no one right way to do it. For example this:  
 
 ```c

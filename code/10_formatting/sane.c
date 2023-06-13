@@ -6,7 +6,6 @@ int main( void )
     bool num_even = false;
     bool num_err = false;
     
-    // if num even, flag
     if ((my_number % 2) == 0)
         num_even = true;
     

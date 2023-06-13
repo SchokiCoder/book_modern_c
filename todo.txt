@@ -31,7 +31,7 @@
 	-check this again just in case			v
 
 	-compare to find differences			.
-	 (progress: done with comments)
+	 (progress: done with build routines)
 
 	-delete odt file				.
 	-change code style to linux			.
@@ -71,8 +71,12 @@
 	 syntax
 	 (branches depending on ther branches, $@, $^)
 	-optional end topics: single header files	.
-	-optional end topics: const vs #define		.
-	 
+	-optional end topics: const vs #define		. 
+	 const pointers are bonkers
+	 ```
+	 static const int *SCIP = &I;
+	 SCIP = &psyche; // possible
+	 ```
 	
 	-memory, please					.
 		-the little song thingy				.
