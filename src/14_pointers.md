@@ -13,10 +13,11 @@ This is called return or out parameter.
 {{ #include ../code/14_pointers/return-parameter.c }}
 ```
 
-A pointer is just a variable. It is a number that is pointing towards a location
-in memory. That is why the function can change your variable that it normally
-wouldn't have access to. To declare a pointer is similar to a normal variable,
-just append a star next to it, like i did in line 03 with that parameter.  
+A pointer is just a variable. It is a number that is _pointing_ towards a
+location in memory. That is why the function can change your variable that it
+normally wouldn't have access to. To declare a pointer is similar to a normal
+variable, just append a star next to it, like i did in line 03 with that
+parameter.  
   
 "In line 14 we call that function, so it can change that variable but what is
 that ampersand for?"  
@@ -32,15 +33,18 @@ If you heavily disagree with me, feel free to use all of C++.
 Pointers are the number one reason for runtime errors, so avoid them if
 possible.  
   
-Anyways remember that pointers don't have the given type as a variable within
+Anyways, remember that pointers don't have the given type as a variable within
 themselves, they just are a number pointing to other variables. If you try to
 dereference a pointer while there is nothing in it, your program crashes and
-burns, leaving you with a "Segmentation fault" in console.  
+burns, leaving you with a `Segmentation fault` in console.  
 
 ## Memory, please
 
 Now were gonna make a pointer have it's own variable... kinda.  
-So we can kindly ask the operating system if it gives us some more memory.  
+Normally the operating system gives us plenty of memory to work with in the
+stack.  
+Sometimes programs do some heavier tasks so that won't work.  
+Use more memory.  
   
 _But with all great things comes a great responsibility,_  
 _that of the programmers being runtime stability._  
@@ -51,7 +55,7 @@ _To which the answer is a simple library._
 {{ #include ../code/14_pointers/malloc.c }}
 ```
 
-Now malloc is short for memory allocate and it's parameter is asking how many
+`malloc` is short for memory allocate and it's parameter is asking how many
 bytes you want. This introduces us to the new operator "sizeof". "sizeof"
 returns how many bytes are used for a given type or variable. After that we
 assign 7 to the int and print it. As we come to the end of "ptr"s life we have

@@ -24,5 +24,5 @@ the result:
 ```
 
 In this code we do have access to "a" and destroy it's original value. The print
-statement was supposed to print "a: 2 c: 6" but now it's both 6.  
+statement was supposed to print `a: 2 c: 6` but now it's both 6.  
 Don't do globals kids.  

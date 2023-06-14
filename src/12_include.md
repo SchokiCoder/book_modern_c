@@ -1,11 +1,11 @@
 # Include
 
 ...someone else's work, so we can have a drink for once. Inclusions allow us to
-split our project into multiple files when needed. The way include works in the
-compiler is really simple. It basically just copies the entire content of the
-included file into our file. The part of the compiler that takes care of that is
-called the preprocessor. Files that are written to be included are header files
-with the ending ".h".  
+split our project into multiple files when needed. The way `include` works in
+the compiler is really simple. It basically just copies the entire content of
+the included file into our file. The part of the compiler that takes care of
+that is called the preprocessor. Files that are written to be included are
+header files with the ending ".h".  
   
 Includes can look like this:  
 
@@ -16,7 +16,7 @@ Includes can look like this:
 The difference between < and " is where the preprocessor first looks for the
 file.  
 
-- <> first looks in system files (such as "stdio.h")
+- \<\> first looks in system files (such as "stdio.h")
 - "" first looks in your local directory (for example "my_file.h", which sits
   next to "main.c")
 
