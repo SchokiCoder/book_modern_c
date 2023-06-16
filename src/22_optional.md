@@ -2,13 +2,12 @@
 
 ## Undefined behavior and co
 
-Can you remember the part in the chapter about types, in which i was talking
-about a "SpecialMachine"?  
-This part exists because of undefined behavior within the C language.  
+Can you remember all the times when said something like "... at least on my
+machine"?  
+These additions exist because of undefined behavior within the C language.  
 Undefined behavior means that the C standard itself does not define what happens
 in every case. One such case is the exact size of an "int".  
-The C standard defines an "int" being at least 16 bits long and at maximum 32
-bits.  
+The C standard requires an "int" to be **at least** 16 bits long.  
 "Then who is defining the exact size at the end of the day?"  
   
 The compiler, even if it results in demons flying out of your nose... don't
@@ -35,8 +34,8 @@ It allows you to directly jump to certain line in you program, like so:
 {{ #include ../code/22_optional-end-topics/evil-goto.c }}
 ```
 
-With larger projects and extensive usage, this will become very hard to read
-very quickly.  
+With larger projects and extensive usage, this will become very hard to keep
+track of very quickly.  
 General rule is: never use this if it is avoidable somehow and it basically
 always avoidable.  
 
@@ -82,7 +81,7 @@ a table with 4 columns. In the first column we see characters that are the same
 for each string. Those are also the characters that we would see from a normal
 printf call with these strings. Every column after that is dedicated to one
 string. For every character we print the actual value in memory. You don't need
-to run this, because i have included the results below.  
+to run this, because i have included the results below the snippet.  
 
 ```c
 {{ #include ../code/22_optional-end-topics/c-strings.c }}
@@ -127,5 +126,5 @@ Null-bytes as string terminators are horribly out of date and no new language
 should use them anymore.  
 One of the reason why they are bad is, in order to process that string you would
 have to step through each char of the string and check if it is the null-char
-BEFORE you can actually work with it. Imagine stepping through hundreds of
+**before** you can actually work with it. Imagine stepping through hundreds of
 char’s each time having this check. Say goodbye to performance in that case.  

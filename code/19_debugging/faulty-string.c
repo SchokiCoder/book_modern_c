@@ -1,3 +1,4 @@
+/* ANCHOR: all */
 #include <stdlib.h>
 #include "faulty_string.h"
 
@@ -27,6 +28,7 @@ String String_from( const char *str )
     return result;
 }
 
+// ANCHOR: String_append
 void String_append( String *self, const char *str)
 {
     size_t len = string_len(str);
@@ -39,6 +41,7 @@ void String_append( String *self, const char *str)
     
     string_copy(&self->str[len - 1], str, len);
 }
+// ANCHOR_END: String_append
 
 void String_clear( String *self )
 {
@@ -46,3 +49,4 @@ void String_clear( String *self )
     self->len = 0;
     free(self->str);
 }
+/* ANCHOR_END: all */

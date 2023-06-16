@@ -12,9 +12,12 @@ implementation of those functions differs.
 Both are valid solutions to the problem.  
 Though you should make sure to use the most simplistic solution whenever
 possible. Sure comments help with complex situations but maintaining a simple
-function is easier than maintaining a complex function.  
+function is easier than maintaining a complex function, regardless of
+comments.  
   
 Never feel smug because you got a flashy solution.  
-As a wise man once said:  
+As a wise _(and crazy)_ man once said:  
 "An idiot admires complexity, a genius admires simplicity."  
 _-Terry Davis_  
+  
+_May your soul rest in a better world._  

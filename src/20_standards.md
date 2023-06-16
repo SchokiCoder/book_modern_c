@@ -2,8 +2,10 @@
 
 _Be polite._ (on StackOverflow)  
 _Be efficient._ (by not writing code multiple times, unless with good reason)  
-_Have a plan to debug every file you write._
-Wait hang on, this is not about you or me but rather about the language.  
+_Have a plan to debug every file you write._  
+  
+Wait hang on, this is not about personal procedure but rather about the
+language.  
 Oh well... still true, though.  
   
 The C programming language was created in the 1970's and it didn't just sit
@@ -19,7 +21,7 @@ For example:
 ```
 
 The one-line comment didn't exist officially until the C99 standard.  
-A more radical and very useful change would be in C11. The support for
+A more impactful change would be in C11. The support for
 generics... kind of:  
 
 ```c
@@ -31,6 +33,8 @@ functions based on the type of your first parameter.
   
 When compiling with gcc you pick a standard with the "-std=cXX" compiler option.
 XX being the standard's version like "c99".  
-Use the "-pedantic" compiler option too, to be notified by the compiler when you
-don't conform the standard. Why this needs to explicitly added for gcc to
-actually take action, i don't know.  
+  
+Additionally you need gcc's "-pedantic" compiler option too, to be notified by
+the compiler when you don't strictly conform the given standard.  
+In gcc using only the "-std" option turns off GNU extensions that contradict the
+standard.  

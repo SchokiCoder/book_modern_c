@@ -30,12 +30,13 @@
 	 yet been fooled by my amateurish mistake.
 	-check this again just in case			v
 
-	-compare to find differences			.
-	 (progress: done with build routines)
+	-compare to find differences			v
 
 	-delete odt file				.
 	-change code style to linux			.
 	-formatting: set opinionated code style to gnu	.
+	-optional topics: undefined behavior: add	.
+	 mention of fixed size ints
 	-rewrite sections that mention			.
 	 source code lines numbers
 	-change code references from quote to md code	.
@@ -65,6 +66,8 @@
 		-add mention of freebsd and gnu code styles	.
 		 "worth to check out"
 	
+	-add as last chapter? file read and write	.
+
 	-optional end topics: add namespaces		.
 	 and file-scope
 	-optional end topics: add advanced makefile	.

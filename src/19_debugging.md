@@ -1,11 +1,12 @@
 # Debugging
 
-Depending on the quality of your code, this is where the real game begins. I am
-joking. Everyone has to deal with a debugger sooner or later, no matter how good
-you are or what language you use.  
+Depending on the quality of your code, this is where the real game begins.  
+Everyone has to deal with a debugger sooner or later, no matter how good you are
+or what language you use.  
   
 A debugger is program that helps you understand the runtime behavior of your
-program. Before we can debug a program we have to help the debugger helping us,
+program by granting you the infinite power of time.  
+Before we can debug a program we have to help the debugger helping us,
 by compiling the targeted program with the compiler-option "-g". This will
 compile the program in a way, so that function-names, variables-names and other
 helpful information are stored in the binary.  
@@ -24,7 +25,7 @@ Now here comes the faulty string library:
 ```
 
 ```c
-{{ #include ../code/19_debugging/faulty-string.c }}
+{{ #include ../code/19_debugging/faulty-string.c:all }}
 ```
 
 The debugging will not focus on "string-utils", so just give them a quick
@@ -77,12 +78,12 @@ Now we want to get into that function. Enter the command `s` or `step`. Now
 let's have a glance at "String_append":  
 
 ```c
-{{ #include ../code/19_debugging/faulty-string.c }}
+{{ #include ../code/19_debugging/faulty-string.c:String_append }}
 ```
 
 First using the utils, we get the length of the string that we want to append.  
-Then we update the string's values len and size and reallocate memory for the
-string.  
+Then we update the string's values "len" and "size" and reallocate memory for
+the string.  
 Finally we copy the appendage onto the end of the string.  
   
 "So maybe 'string_len' does not work, gives us the wrong 'len', causing the
@@ -100,8 +101,8 @@ look like:
 `{size = 11, len = 3, str = 0x5555555592c0 ""}`  
   
 Huh... look closely at the "string_copy" call. The first parameter is a pointer
-to string and we certainly give that to the function. We take the "str" pointer
-go to certain position within it and return a pointer from that position. This
+to string and we certainly give that to the function. We take the "str" pointer,
+go to a certain position within it and return a pointer from that position. This
 position is supposed to be the end of the string, so that the appendage gets
 copied after the string.  
   
@@ -110,7 +111,7 @@ However the position given is not correct though. Our string is still empty but
 Here is the fixed "String_append". Read the comment within:  
 
 ```c
-{{ #include ../code/19_debugging/correct-string.c }}
+{{ #include ../code/19_debugging/correct-string.c:String_append }}
 ```
 
 To stop gdb just enter `quit`. Technically with extensive code-reading alone,
@@ -130,12 +131,13 @@ Jacob Sorber did it and even my unborn children will do it.
   
 The wrong way to debug is misusing the "printf" function to display variables at
 runtime.  
-This can work at first but it has quite a few shortcomings:  
+This _can_ work at first but it has quite a few shortcomings:  
 
-- if the program crashes before the "printf", then it didn't help at all (with a
-  debugger you use bt or backtrace to find out where it crashed and potentially why)
-- the output of "printf" is buffered, meaning that it can be put out to the
-  console later than you actually anticipated
+- if the program crashes before the "printf", then it didn't help at all (with
+  gdb you use `bt` or `backtrace` to find out where it crashed and potentially
+  why)
+- the output of "printf" is usually buffered, meaning that it can be put out to
+  the console later than you actually anticipated
 - you may forget to remove a "printf" call before release
 - you have to do your own formatting every time or remember the order of
   "printf" calls and what is fed to them
@@ -145,6 +147,8 @@ This can work at first but it has quite a few shortcomings:
 
 "Wait that last one is not true, i can add all my 'printf' calls in 10 seconds
 flat."  
-Yes, you can but when is your debugging really done with just a few prints?  
-Just imagine debugging our previous example with print's. Also the other reasons
-are more than enough to deter every experienced programmer from print's.  
+Yes, you can but when is your debugging really done with just a few print
+calls?  
+Just imagine debugging our previous example with only "printf".  
+Also the other reasons are more than enough to deter every experienced
+programmer from that.  

@@ -1,6 +1,6 @@
 void draw( int red, int green, int blue )
 {
-    // draw somehow
+    // draw something, somehow
 }
 
 enum Color
