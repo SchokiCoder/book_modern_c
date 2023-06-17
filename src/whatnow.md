@@ -50,3 +50,7 @@ C++ but that doesn't mean it makes sense to do so.
 Programming languages are tools like a shovel or a pickax and you wouldn't try
 to dig into dirt with a pickax, right? Different languages can work together and
 compliment each other.  
+  
+So go out there, automate some tedious processes with any programming language,
+a shell script or some file workflow related business with a well written
+Makefile and tell them Schoki send you.  

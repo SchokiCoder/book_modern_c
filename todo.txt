@@ -52,13 +52,9 @@
 	 mind the filename references in debugging
 	-make sure header guards use correct symbols	v
 
-	-rewrite chapter build routines			.
-	-add link to git repo to mdbook settings?	.
-
-	-is code/types and variables/char.c missing?	.
-
-	-html screws over my tabs, how can i		.
-	 md to pdf while preserving tabs
+	-rewrite chapter build routines			v
+	-add link to git repo to mdbook settings?	x
+	 docs don't say how so fuck it
 
 	-formatting					.
 		-examples: add fallthrough with comment		.
@@ -93,6 +89,9 @@
 		 The song implies this however.
 		 Rephrase song or add "i lied lol. u use c,
 		 there is no hope :P".
+
+	-html screws over my tabs, how can i		.
+	 md to pdf while preserving tabs
 
 	-relicense under ccsa				?
 	-update license in readme.md			?
