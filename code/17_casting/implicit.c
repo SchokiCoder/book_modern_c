@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-int main( void )
+int main(void)
 {
-    float temp = 10;
-    
-    printf("%f\n", temp);
+	float temp = 10;
+
+	printf("%f\n", temp);
 }

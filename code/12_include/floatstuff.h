@@ -5,6 +5,6 @@
 
 static const float F1 = 0.1;
 
-float floatadd( float, float );
+float floatadd(float, float);
 
-#endif /* FLOATSTUFF_H */
+#endif				/* FLOATSTUFF_H */

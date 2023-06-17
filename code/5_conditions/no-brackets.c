@@ -1,9 +1,9 @@
-int main( void )
+int main(void)
 {
-    int a, b, c;
-    
-    if (a == 10)
-        b++;
-    else
-        c--;
+	int a, b, c;
+
+	if (a == 10)
+		b++;
+	else
+		c--;
 }

@@ -1,6 +1,6 @@
 #ifndef INTSTUFF_H
 #define INTSTUFF_H
 
-int bogoman( void );
+int bogoman(void);
 
-#endif /* INTSTUFF_H */
+#endif				/* INTSTUFF_H */

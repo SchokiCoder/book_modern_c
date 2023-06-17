@@ -5,19 +5,18 @@
 
 static const size_t STR_NEW_SIZE = 8;
 
-typedef struct String
-{
-    size_t size;
-    size_t len;
-    char *str;
+typedef struct String {
+	size_t size;
+	size_t len;
+	char *str;
 } String;
 
 String String_new();
 
-String String_from( const char *str );
+String String_from(const char *str);
 
-void String_append( String *self, const char *str);
+void String_append(String * self, const char *str);
 
-void String_clear( String *self );
+void String_clear(String * self);
 
-#endif /* CORRECT_STRING_H */
+#endif				/* CORRECT_STRING_H */

@@ -1,15 +1,15 @@
 #include <stdio.h>
 
-int triple( int b )
+int triple(int b)
 {
-    a *= 3;
-    return a;
+	a *= 3;
+	return a;
 }
 
-int main( void )
+int main(void)
 {
-    int a = 2, c = 0;
-    c = triple(a);
+	int a = 2, c = 0;
+	c = triple(a);
 
-    printf("a: %i c: %i\n", a, c);
+	printf("a: %i c: %i\n", a, c);
 }

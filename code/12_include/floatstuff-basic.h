@@ -5,4 +5,4 @@
 
 static const float F1 = 0.1;
 
-#endif /* FLOATSTUFF_H */
+#endif				/* FLOATSTUFF_H */

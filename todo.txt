@@ -32,42 +32,46 @@
 
 	-compare to find differences			v
 
-	-delete odt file				.
-	-change code style to linux			.
+	-delete odt file				v
+	-change code style to linux			v
+	-check on sideeffects ^				.
 	-formatting: set opinionated code style to gnu	.
-	-optional topics: undefined behavior: add	.
-	 mention of fixed size ints
+	-html screws over my tabs, how can i		.
+	 md to pdf while preserving tabs
+
 	-rewrite sections that mention			.
 	 source code lines numbers
 	-change code references from quote to md code	.
 	 instead of writing
 	 """... the keyword "struct"..."""
 	 """... the keyword `struct`..."""
+
 	-remove typedefs as default from code		.
 	 (mind structures where its wanted)
 	-rename code '-' to '_'				.
 	 mind the filename references in debugging
+
 	-add favicon					?
 	 from old cover i guess
 	-add link to git repo to mdbook settings?	.
 
-	-add makefiles move binaries to code/bin/	.
+	-add makefiles move binaries to code/target/	.
 	-add clean to makefiles				.
-	-gitignore only code/bin/*			.
+	-gitignore only code/target/*			.
 	-is code/types and variables/char.c missing?	.
-	
+
 	-formatting					.
 		-examples: add fallthrough with comment		.
 		 and without comment on negative one
 		-positive example: remove double indent		.
 		 of cases
-		-"too bad this is worthless." ->		.
-		 "too bad it's not worth it at all."
 		-add mention of freebsd and gnu code styles	.
 		 "worth to check out"
-	
+
 	-add as last chapter? file read and write	.
 
+	-optional topics: undefined behavior: add	.
+	 mention of fixed size ints
 	-optional end topics: add namespaces		.
 	 and file-scope
 	-optional end topics: add advanced makefile	.

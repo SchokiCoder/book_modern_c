@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main( void )
+int main(void)
 {
-    int* ptr = malloc(sizeof(int));
-    
-    *ptr = 7;
+	int *ptr = malloc(sizeof(int));
 
-    printf("%li\n", sizeof(*ptr));
+	*ptr = 7;
 
-    free(ptr);
+	printf("%li\n", sizeof(*ptr));
+
+	free(ptr);
 }

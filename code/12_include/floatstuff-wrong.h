@@ -5,9 +5,9 @@
 
 static const float F1 = 0.1;
 
-float floatadd( float a, float b )
+float floatadd(float a, float b)
 {
-    return a + b;
+	return a + b;
 }
 
-#endif /* FLOATSTUFF_H */
+#endif				/* FLOATSTUFF_H */

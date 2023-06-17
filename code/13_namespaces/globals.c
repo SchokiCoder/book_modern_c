@@ -2,15 +2,15 @@
 
 int a = 2, c = 0;
 
-int triple( int b )
+int triple(int b)
 {
-    a *= 3;
-    return a;
+	a *= 3;
+	return a;
 }
 
-int main( void )
+int main(void)
 {
-    c = triple(a);
+	c = triple(a);
 
-    printf("a: %i c: %i\n", a, c);
+	printf("a: %i c: %i\n", a, c);
 }
