@@ -32,7 +32,7 @@ Of course there is also no one right way to do it. For example this:
 {{ #include ../code/10_formatting/opinion.h }}
 ```
 
-is also a very common way to put curly brackets.  
+is also a common way to put curly brackets or handle indentation.  
 It is up to your preference or the preference of your team leader. Please don't
 ignore him when he is giving you formatting rules for your project.
 The most beautiful formatting doesn't do anything if it is inconsistent with the

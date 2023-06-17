@@ -57,6 +57,10 @@ shuffled around during the calculation, i do not want to demonstrate.
 I rather just want to raise your awareness about the fact, that floats cannot be
 entirely trusted. Always use their results with a grain of salt and extra
 care... or avoid using them altogether when possible.  
+  
+You take this instead:  
+`printf("%1.20f\n", f);`  
+and you will see how deep the rabbit hole goes.  
 
 ## C and strings
 

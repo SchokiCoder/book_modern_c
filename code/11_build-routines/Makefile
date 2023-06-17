@@ -1,8 +1,0 @@
-APP_NAME="myapp"
-FLAGS="-std=c99 -pedantic -Wall -Wextra"
-
-debug:
-	cc myfirst.c mysecond.c -o $(APP_NAME) $(FLAGS) -g
-
-release:
-	cc myfirst.c mysecond.c -o $(APP_NAME) $(FLAGS) -O3
