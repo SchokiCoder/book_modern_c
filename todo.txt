@@ -39,27 +39,26 @@
 	 `-Wall -Wextra -Werror`
 	-replace makefiles with just one		v
 	-gitignore only code/target/*			v
-	-relink code in md				.
+	-relink code in md				v
 
-	-html screws over my tabs, how can i		.
-	 md to pdf while preserving tabs
-
-	-rewrite sections that mention			.
+	-rewrite sections that mention			v
 	 source code lines numbers
-	-change code references from quote to md code	.
-	 instead of writing
-	 """... the keyword "struct"..."""
-	 """... the keyword `struct`..."""
 
-	-remove typedefs as default from code		.
+	-remove typedefs as default from code		v
 	 (mind structures where its wanted)
-	-rename code '-' to '_'				.
+	-merge 19_faulty_string.h 19_correct_string.h	v
+	 (same)
+	-rename code '-' to '_'				v
 	 mind the filename references in debugging
+	-make sure header guards use correct symbols	v
 
 	-rewrite chapter build routines			.
 	-add link to git repo to mdbook settings?	.
 
 	-is code/types and variables/char.c missing?	.
+
+	-html screws over my tabs, how can i		.
+	 md to pdf while preserving tabs
 
 	-formatting					.
 		-examples: add fallthrough with comment		.

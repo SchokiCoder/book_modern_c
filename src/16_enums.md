@@ -5,7 +5,7 @@ type.
 For example, our program may need to handle colors for drawing a certain thing:
 
 ```c
-{{ #include ../code/16_enumerators/enum.c }}
+{{ #include ../code/16_enum.c }}
 ```
 
 An enum at it's core is a numerical type. You can assign any constant number to
@@ -14,7 +14,7 @@ Let's imagine we have to handle a players interactions in a multiplayer game we
 have made:  
 
 ```c
-{{ #include ../code/16_enumerators/enum-vals.h }}
+{{ #include ../code/16_enum_vals.c }}
 ```
 
 "There are some gaps in the enum."  

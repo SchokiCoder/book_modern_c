@@ -1,10 +1,10 @@
-#include "19_correct_string.h"
+#include "19_string.h"
 #include <stdio.h>
 
 int main(void)
 {
-	String str_hi = String_from("hi");
-	String str_twoplusone = String_new();
+	struct String str_hi = String_from("hi");
+	struct String str_twoplusone = String_new();
 
 	String_append(&str_twoplusone, "two");
 	String_append(&str_twoplusone, " + ");

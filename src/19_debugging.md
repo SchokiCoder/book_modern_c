@@ -15,28 +15,28 @@ So let's first get a project with a faulty piece of code, that we have to debug,
 starting with the main file:  
 
 ```c
-{{ #include ../code/19_debugging/faulty-code.c }}
+{{ #include ../code/19_faulty.c }}
 ```
 
 Now here comes the faulty string library:  
 
 ```c
-{{ #include ../code/19_debugging/faulty-string.h }}
+{{ #include ../code/19_string.h }}
 ```
 
 ```c
-{{ #include ../code/19_debugging/faulty-string.c:all }}
+{{ #include ../code/19_faulty_string.c:all }}
 ```
 
-The debugging will not focus on "string-utils", so just give them a quick
+The debugging will not focus on "string_utils", so just give them a quick
 glance:  
 
 ```c
-{{ #include ../code/19_debugging/string-utils.h }}
+{{ #include ../code/19_string_utils.h }}
 ```
 
 ```c
-{{ #include ../code/19_debugging/string-utils.c }}
+{{ #include ../code/19_string_utils.c }}
 ```
 
 The goal of our program is to print:  
@@ -69,7 +69,7 @@ later on.
   
 It seems that the function "String_append" is not doing it's job correctly. So
 let's get bloody goin, by entering the command `n` (short for `next`) in gdb, we
-can line by line work our way towards the problematic point. So we when gdb
+can line by line work our way towards the problematic point. So when gdb
 displays:  
 `String_append(&str_twoplusone, "two");`  
 Don't enter `next` anymore.  
@@ -78,7 +78,7 @@ Now we want to get into that function. Enter the command `s` or `step`. Now
 let's have a glance at "String_append":  
 
 ```c
-{{ #include ../code/19_debugging/faulty-string.c:String_append }}
+{{ #include ../code/19_faulty_string.c:String_append }}
 ```
 
 First using the utils, we get the length of the string that we want to append.  
@@ -111,7 +111,7 @@ However the position given is not correct though. Our string is still empty but
 Here is the fixed "String_append". Read the comment within:  
 
 ```c
-{{ #include ../code/19_debugging/correct-string.c:String_append }}
+{{ #include ../code/19_correct_string.c:String_append }}
 ```
 
 To stop gdb just enter `quit`. Technically with extensive code-reading alone,

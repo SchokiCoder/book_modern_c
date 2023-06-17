@@ -6,7 +6,7 @@ To start programming create a new file and call it “main.c”.
 The following is a "listing" or "snippet". Now make a "main.c" file and type the
 following code into it:  
 ```c
-{{ #include ../code/1_main/barebones.c }}
+{{ #include ../code/1_barebones.c }}
 ```
 
 This is what pretty much every C program has at minimum.  

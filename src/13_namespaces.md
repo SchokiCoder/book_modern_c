@@ -5,7 +5,7 @@ everyone within it but not outside of it. That is how variables and namespaces
 also work. Every variable is within a namespace.  
 
 ```c
-{{ #include ../code/13_namespaces/thanks-namespaces.c }}
+{{ #include ../code/13_namespaces.c }}
 ```
 
 In this erroneous code, namespaces prevented us from doing a terrible mistake.
@@ -20,7 +20,7 @@ If we would have used global variables in the previous example, this would be
 the result:  
 
 ```c
-{{ #include ../code/13_namespaces/globals.c }}
+{{ #include ../code/13_globals.c }}
 ```
 
 In this code we do have access to "a" and destroy it's original value. The print

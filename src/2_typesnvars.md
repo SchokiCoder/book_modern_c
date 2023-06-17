@@ -6,7 +6,7 @@ Computing is all about getting results (of calculations) and to store these
 results, we need variables. In C these need to be declared, we do that by giving
 them a type and a name.  
 ```c
-{{ #include ../code/2_types-and-variables/variables.c }}
+{{ #include ../code/2_variables.c }}
 ```
 
 Here we declare the two variables “my_id” and "counter" of the type "int".
@@ -209,7 +209,7 @@ They are like variables but immutable. To declare a constant put "const" at the
 beginning.  
 
 ```c
-{{ #include ../code/2_types-and-variables/constants.c }}
+{{ #include ../code/2_constants.c }}
 ```
 
 As you can see, declaration and usage are quite simple. Please use uppercase

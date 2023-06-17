@@ -9,7 +9,7 @@ parentheses next to it.
 Within the parentheses of the function call comes the data.  
 
 ```c
-{{ #include ../code/3_functions/functions.c }}
+{{ #include ../code/3_functions.c }}
 ```
 
 As a side-note: we return a number from main, to tell the operating system,

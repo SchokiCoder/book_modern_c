@@ -1,5 +1,5 @@
-#ifndef _12_FLOATSTUFF_H
-#define _12_FLOATSTUFF_H
+#ifndef _12_FAULTY_FLOATSTUFF_H
+#define _12_FAULTY_FLOATSTUFF_H
 
 #include "12_intstuff.h"
 
@@ -10,4 +10,4 @@ float floatadd(float a, float b)
 	return a + b;
 }
 
-#endif				/* _12_FLOATSTUFF_H */
+#endif				/* _12_FAULTY_FLOATSTUFF_H */

@@ -25,7 +25,7 @@ A more impactful change would be in C11. The support for
 generics... kind of:  
 
 ```c
-{{ #include ../code/20_professionals-have-standards/generics.c }}
+{{ #include ../code/20_generics.c }}
 ```
 
 This macro basically reroutes your "add" call to the according "addi" and "addf"

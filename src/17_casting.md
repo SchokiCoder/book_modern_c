@@ -5,7 +5,7 @@ To cast means to change a variables type. Effectively forcing the program to
 interpret the values bytes differently. Remember that second sentence.  
 
 ```c
-{{ #include ../code/17_casting/flip.c }}
+{{ #include ../code/17_flip.c }}
 ```
 
 Here we cast to the same sized integer but from unsigned to signed. Thanks to
@@ -19,7 +19,7 @@ You should not rely on it though because it can be hard to see sometimes and as
 such obfuscates your code.  
 
 ```c
-{{ #include ../code/17_casting/implicit.c }}
+{{ #include ../code/17_implicit.c }}
 ```
 
 To explicitly present a float do not forget to type the comma: 10.0 (and
@@ -27,7 +27,7 @@ technically a 'f' afterwards): `10.0f`
 Implicit casts can also come with data loss, in a very sneaky way:  
 
 ```c
-{{ #include ../code/17_casting/data-loss.c }}
+{{ #include ../code/17_data_loss.c }}
 ```
 
 When a float is cast to an integer, everything after the comma will just be

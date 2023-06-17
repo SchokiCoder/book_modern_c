@@ -7,7 +7,7 @@ Though this is not the structures main purpose.
 The following example shows a very simplified simulated messaging app.  
 
 ```c
-{{ #include ../code/15_structures/messenger.c }}
+{{ #include ../code/15_messenger.c }}
 ```
 
 So we define the struct "Message" with three variables in it.  
@@ -22,7 +22,7 @@ We could also create our own type for user-id's.
 Applying those changes, makes our code look like this:  
 
 ```c
-{{ #include ../code/15_structures/improved.c }}
+{{ #include ../code/15_typedef.c }}
 ```
 
 Wether these changes are good and wanted depends on... opinions, YAY.  

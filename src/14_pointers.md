@@ -10,22 +10,22 @@ change a variable via a function without using a return value.
 This is called return or out parameter.  
 
 ```c
-{{ #include ../code/14_pointers/return-parameter.c }}
+{{ #include ../code/14_return_parameter.c }}
 ```
 
 A pointer is just a variable. It is a number that is _pointing_ towards a
 location in memory. That is why the function can change your variable that it
 normally wouldn't have access to. To declare a pointer is similar to a normal
-variable, just append a star next to it, like i did in line 03 with that
+variable, just append a star next to it, like i did in the function with it's
 parameter.  
   
-"In line 14 we call that function, so it can change that variable but what is
-that ampersand for?"  
+"In the function call, what is that ampersand for?"  
 An ampersand before a variable means that you don't give something the value of
 that variable but instead it's location in memory. This is called referencing
-the variable and the opposite happens in line 05 where it is dereferenced.
-To dereference means to access the memory location given in that pointer. After
-that we can actually write to or read the value from that pointer.  
+the variable and the opposite happens within the function, where it is
+dereferenced. To dereference means to access the memory location given in that
+pointer. After that we can actually write to or read the value from that
+pointer.  
   
 "So who needs return values, right?"  
 You lad. Just because something is possible doesn't mean you have to use it.  
@@ -52,7 +52,7 @@ _How, you ask, are they up to the task?_
 _To which the answer is a simple library._  
 
 ```c
-{{ #include ../code/14_pointers/malloc.c }}
+{{ #include ../code/14_malloc.c }}
 ```
 
 `malloc` is short for memory allocate and it's parameter is asking how many
@@ -67,7 +67,7 @@ This allocation also works for arrays but a bit more awareness is needed for
 that.  
 
 ```c
-{{ #include ../code/14_pointers/const-size.c }}
+{{ #include ../code/14_const_size.c }}
 ```
 
 In the malloc-call we now need to multiplicate the size of an integer with the

@@ -31,7 +31,7 @@ it will recommend you to tread lightly.
 It allows you to directly jump to certain line in you program, like so:  
 
 ```c
-{{ #include ../code/22_optional-end-topics/evil-goto.c }}
+{{ #include ../code/22_evil_goto.c }}
 ```
 
 With larger projects and extensive usage, this will become very hard to keep
@@ -45,7 +45,7 @@ Now we talk about the precision. What do you think this cute little program
 could spit out?  
 
 ```c
-{{ #include ../code/22_optional-end-topics/float.c }}
+{{ #include ../code/22_float.c }}
 ```
 
 Did you think it's a flat `0.3`?  
@@ -88,7 +88,7 @@ string. For every character we print the actual value in memory. You don't need
 to run this, because i have included the results below the snippet.  
 
 ```c
-{{ #include ../code/22_optional-end-topics/c-strings.c }}
+{{ #include ../code/22_cstrings.c }}
 ```
 
 Here are the results:  

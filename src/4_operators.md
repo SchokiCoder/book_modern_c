@@ -39,7 +39,7 @@ Theoretically it is important where this operator is relative to its variable
 but in practice this rarely comes up.  
 
 ```c
-{{ #include ../code/4_operators101/increment_basic.c }}
+{{ #include ../code/4_increment_basic.c }}
 ```
 
 Postfix (`a++`) and prefix (`++a`) are both valid and do something slightly
@@ -49,7 +49,7 @@ difference is, that the result is returned either before or after incrementing
 or decrementing.  
 
 ```c
-{{ #include ../code/4_operators101/increment_return.c }}
+{{ #include ../code/4_increment_return.c }}
 ```
 
 When the increment operator is on the right side (postfix), then we first

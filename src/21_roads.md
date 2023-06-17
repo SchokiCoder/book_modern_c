@@ -6,7 +6,7 @@ snippet are two functions that reverse a string. The interface and
 implementation of those functions differs.  
 
 ```c
-{{ #include ../code/21_roads-to-rome/string-reverse.c }}
+{{ #include ../code/21_string_reverse.c }}
 ```
 
 Both are valid solutions to the problem.  

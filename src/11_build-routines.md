@@ -28,7 +28,7 @@ debug-build but also the one for the release-build.
 So that is where Makefiles come in:  
 
 ```Makefile
-{{ #include ../code/11_build-routines/Makefile }}
+{{ #include ../code/11_Makefile }}
 ```
 
 Makefiles have to be named "Makefile". When you call `make`, it will look for

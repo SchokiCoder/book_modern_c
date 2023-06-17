@@ -10,7 +10,7 @@ header files with the ending ".h".
 Includes can look like this:  
 
 ```c
-{{ #include ../code/12_include/include.h }}
+{{ #include ../code/12_include.c }}
 ```
 
 The difference between < and " is where the preprocessor first looks for the
@@ -44,22 +44,22 @@ header files.
 The following technique is called header guards.  
 
 ```c
-{{ #include ../code/12_include/floatstuff-basic.h }}
+{{ #include ../code/12_small_floatstuff.h }}
 ```
 
-In line 01, 02 and 08 we have instructions for the preprocessor. Every
-preprocessor instruction begins with a '#' character. In line 01 we check if the
-symbol "FLOATSTUFF_H" exists, if it doesn't exist the preprocessor is free to
-actually include the next lines until line 08. The symbol "FLOATSTUFF_H"
-represents the filename. That means the next time we include this file and the
-content is already defined, the preprocessor just ignores it.  
+Here we have instructions for the preprocessor. These begin with a '#'
+character. First we check if the symbol "_12_FLOATSTUFF_H" exists, if it doesn't
+exist the preprocessor is free to actually include the next lines until the
+`#endif`. The symbol "_12_FLOATSTUFF_H" represents the filename. That means the
+next time we include this file and the content is already defined, the
+preprocessor just ignores it.  
 
 ## Definition vs Declaration
 
 Imagine having a header file: "floatstuff.h":  
 
 ```c
-{{ #include ../code/12_include/floatstuff-wrong.h }}
+{{ #include ../code/12_faulty_floatstuff.h }}
 ```
 
 Here we have the function "floatadd", which is declared and defined. This can
@@ -70,13 +70,13 @@ By moving the implementation of the function into a respective "floatstuff.c"
 file:  
 
 ```c
-{{ #include ../code/12_include/floatstuff.c }}
+{{ #include ../code/12_floatstuff.c }}
 ```
 
 After that the header looks like so:
 
 ```c
-{{ #include ../code/12_include/floatstuff.h }}
+{{ #include ../code/12_correct_floatstuff.h }}
 ```
 
 We don't need the function body anymore (the implementation) and we don't even
@@ -111,11 +111,11 @@ So practically a template for those two files could look like this:
 header:  
 
 ```c
-{{ #include ../code/12_include/template.h }}
+{{ #include ../code/12_template.h }}
 ```
 
 c-file:  
 
 ```c
-{{ #include ../code/12_include/template.c }}
+{{ #include ../code/12_template.c }}
 ```

@@ -1,10 +1,10 @@
 /* ANCHOR: all */
 #include <stdlib.h>
-#include "19_correct_string.h"
+#include "19_string.h"
 
-String String_new()
+struct String String_new()
 {
-	String result = {
+	struct String result = {
 		.size = STR_NEW_SIZE,
 		.len = 0,
 		.str = malloc(sizeof(char) * STR_NEW_SIZE),
@@ -13,11 +13,11 @@ String String_new()
 	return result;
 }
 
-String String_from(const char *str)
+struct String String_from(const char *str)
 {
 	size_t len = string_len(str);
 
-	String result = {
+	struct String result = {
 		.size = len + 1,
 		.len = len,
 		.str = malloc(sizeof(char) * result.size),
@@ -29,7 +29,7 @@ String String_from(const char *str)
 }
 
 // ANCHOR: String_append
-void String_append(String *self, const char *str)
+void String_append(struct String *self, const char *str)
 {
 	size_t len = string_len(str);
 
@@ -47,7 +47,7 @@ void String_append(String *self, const char *str)
 
 // ANCHOR_END: String_append
 
-void String_clear(String *self)
+void String_clear(struct String *self)
 {
 	self->size = 0;
 	self->len = 0;

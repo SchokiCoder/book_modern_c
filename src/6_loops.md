@@ -1,17 +1,17 @@
 # Loops
 
 Important for a lot of things. In the upcoming example we have 3 integers, all
-set to 1. In line 07 we start a loop. This loop runs as long as "a" is smaller
-than 100. Within every run of that loop we store the value of "b" in "c", then
-"a" in "b" and then we calculate a new "a" from adding "b" and "c". Thanks to
-the starting values of those 3 variables we can ensure that the "a" will
-increase over time and the loop eventually exits.  
+set to 1. With `while (condition)` we start a loop. This loop runs as long as
+"a" is smaller than 100. Within every run of that loop we store the value of "b"
+in "c", then "a" in "b" and then we calculate a new "a" from adding "b" and "c".
+Thanks to the starting values of those 3 variables we can ensure that the "a"
+will increase over time and the loop eventually exits.  
 
 ```c
-{{ #include ../code/6_loops/while.c }}
+{{ #include ../code/6_while.c }}
 ```
 
-A loop has a head (line 07) and a body (lines 08 - 12).  
+A loop has a head `while ()` and a body `{ ... }`.  
 There are 3 kinds of loops in C:  
 
 - while
@@ -23,7 +23,7 @@ runs it's body and then it checks the condition in the head or in this case
 foot.  
 
 ```c
-{{ #include ../code/6_loops/do-while.c }}
+{{ #include ../code/6_do_while.c }}
 ```
 
 In my experience, this is the least used loop but definitely not useless. You
@@ -34,7 +34,7 @@ before the loop starts, the condition and a statement that runs after each time
 the loop body ran.  
 
 ```c
-{{ #include ../code/6_loops/for.c }}
+{{ #include ../code/6_for.c }}
 ```
 
 Before this for loop runs we set the integer i to 0. Separate that statement
@@ -53,7 +53,7 @@ keywords "continue" and "break".
 This could look like so:  
 
 ```c
-{{ #include ../code/6_loops/loop-control.c }}
+{{ #include ../code/6_loop_control.c }}
 ```
 
 It's kind of a nonsensical example but it's good enough for demonstration.  

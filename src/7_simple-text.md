@@ -5,7 +5,7 @@ I think the best way to learn the basic usage of this feature is to look and try
 it out yourself:  
 
 ```c
-{{ #include ../code/7_simple-text/printf.c }}
+{{ #include ../code/7_printf.c }}
 ```
 
 Quick facts:  
@@ -20,7 +20,7 @@ Quick facts:
 - '\n' is a line break
 - "%i" means you insert an integer there
 - "%s" means you insert a string there
-- to print a " in such a text write \", like in line 11
+- to print a " in such a text write \\"
 
 How strings work in the background will be covered later. Just keep the usage
 of "printf" in mind.  
