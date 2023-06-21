@@ -60,19 +60,21 @@
 		-examples: add fallthrough with comment		v
 		 and without comment on negative one
 		-add mention of linux and gnu code styles	v
-		 "worth to check out"
 
 	-optional topics: add excuse to skip		v
 	-optional topics: undefined behavior: add	v
 	 fixed size ints
 
-	-optional end topics: add advanced scope rules	.
+	-typo check new chapters			.
+	 (input, fileio)
+	-integrate stdin (must be before fileio)	.
+	-integrate fileio (must be after stdin)		.
+	-optional topics: strings: add security		.
+
+	-optional topics: add advanced scope rules	.
 		-wip add example for extern			.
 		-wip review					.
 
-	-optional end topics: add advanced makefile	.
-	 syntax
-	 (branches depending on ther branches, $@, $^)
 	-optional end topics: linking to a library	.
 	-optional end topics: single header files	.
 	-optional end topics: const vs #define		. 
