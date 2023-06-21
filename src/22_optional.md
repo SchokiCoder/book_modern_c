@@ -1,4 +1,9 @@
-# Optional end topics
+# Optional topics for the end
+
+Now there will be some topics that i think are optional to know but i highly
+recommend reading them if you are interested in _actual_ C programming.  
+If not and you'd rather begin your real programming in another language, skip to
+the chapter "What happens now?".  
 
 ## Undefined behavior and co
 
@@ -21,6 +26,12 @@ compiler and the targeted machine was a lot more important back then.
   
 In current year however standardization of the platforms turned this into less
 of an advantage and more of a... nasal demon spawn-hole.  
+  
+Luckily we nowadays have fixed size integers that you can get from "stdint.h".  
+
+```C
+{{ #include ../code/22_fixsizeint.c }}
+```
 
 ## goto: chaos >:D
 
@@ -28,7 +39,7 @@ One technique to control the flow i haven't mentioned yet is `goto`. This is
 because it's usage is very discouraged by most developers. The ones that do use
 it will recommend you to tread lightly.  
   
-It allows you to directly jump to certain line in you program, like so:  
+It allows you to directly jump to certain line in your program, like so:  
 
 ```c
 {{ #include ../code/22_evil_goto.c }}
@@ -132,3 +143,63 @@ One of the reason why they are bad is, in order to process that string you would
 have to step through each char of the string and check if it is the null-char
 **before** you can actually work with it. Imagine stepping through hundreds of
 char’s each time having this check. Say goodbye to performance in that case.  
+
+## Advanced scope rules
+
+So far i have just mentioned that a variable from a function cannot be used in
+another function but there is a lot more to scope rules.  
+Normally when a variable reaches the end of it's scope, it stops existing.  
+
+```c
+{{ #include ../code/22_static.c }}
+```
+
+This new little keyword in "func" makes "i" preserve it's value between the
+individual calls of the function.  
+  
+_Now the surgery is complete_  
+_And mortality is defeated_  
+  
+But don't worry it's **not** a global variable it's still just accessible from
+within "func".  
+To continue it's best to split the previously vaguely used term "scope" into
+"storage duration" and "linkage".  
+
+### storage duration
+
+"i" has a so called "static storage duration", which means it exists for as long
+as our program runs. This also means it is initialized just once.  
+  
+On the other side we have the default: "automatic storage duration".  
+It get's created at the start of the block it was declared in and dies with the
+end of the block.  
+
+### linkage
+
+There are three kinds of linkage: external, internal and no linkage.  
+
+# TODO
+Example for extern!
+
+```c
+{{ #include ../code/22_extern.c }}
+```
+
+### Sum up
+
+Here are all the keywords that manipulate the scope of objects and functions:  
+
+Keyword  | storage duration | linkage
+---------|------------------|---------
+static   | static           | internal
+extern   | static           | external
+register | automatic        | none
+auto     | automatic        | none
+
+All objects have some linking and storage duration by default:  
+
+Object                  | storage duration | linkage
+------------------------|------------------|---------
+variable at block scope | automatic        | none
+variable at file scope  | static           | internal
+function                | nothing to store | external

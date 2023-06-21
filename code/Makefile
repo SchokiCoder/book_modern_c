@@ -22,7 +22,7 @@ all: ${TARGET_PATH}\
 	19_faulty 19_correct\
 	20_generics\
 	21_string_reverse\
-	22_evil_goto 22_float 22_cstrings
+	22_fixsizeint 22_evil_goto 22_float 22_cstrings 22_static
 
 1_barebones: 1_barebones.c
 	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
@@ -94,7 +94,8 @@ all: ${TARGET_PATH}\
 	$(CC) ${COPTS} -Wno-unused -o ${TARGET_PATH}/$@ $^
 
 10_insane: 10_insane.c
-	$(CC) ${COPTS} -Wno-unused -o ${TARGET_PATH}/$@ $^
+	$(CC) ${COPTS} -Wno-unused -Wno-implicit-fallthrough \
+		-o ${TARGET_PATH}/$@ $^
 
 12_include.o: 12_include.c
 	touch my_file.h
@@ -156,6 +157,9 @@ all: ${TARGET_PATH}\
 21_string_reverse: 21_string_reverse.c
 	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
 
+22_fixsizeint: 22_fixsizeint.c
+	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+
 22_evil_goto: 22_evil_goto.c
 	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
 
@@ -163,6 +167,9 @@ all: ${TARGET_PATH}\
 	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
 
 22_cstrings: 22_cstrings.c
+	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+
+22_static: 22_static.c
 	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
 
 clean:

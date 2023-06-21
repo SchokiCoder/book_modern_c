@@ -2,7 +2,7 @@
 
 Now? Let's go practice development.  
   
-I recommend you to just write a simple silly application in C and play around.
+I recommend you to just write a simple silly application and play around.
 Whatever you do wrong now, won't hurt anyone, so go nuts.  
 A simple guessing game, a program to read a file and replace every '.' with an
 '!'. Write a library that provides support for string handling or perhaps create

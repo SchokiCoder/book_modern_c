@@ -56,20 +56,20 @@
 	-add link to git repo to mdbook settings?	x
 	 docs don't say how so fuck it
 
-	-formatting					.
-		-examples: add fallthrough with comment		.
+	-formatting					v
+		-examples: add fallthrough with comment		v
 		 and without comment on negative one
-		-positive example: remove double indent		.
-		 of cases
-		-add mention of freebsd and gnu code styles	.
+		-add mention of linux and gnu code styles	v
 		 "worth to check out"
 
-	-add as last chapter? file read and write	.
+	-optional topics: add excuse to skip		v
+	-optional topics: undefined behavior: add	v
+	 fixed size ints
 
-	-optional topics: undefined behavior: add	.
-	 mention of fixed size ints
-	-optional end topics: add namespaces		.
-	 and file-scope
+	-optional end topics: add advanced scope rules	.
+		-wip add example for extern			.
+		-wip review					.
+
 	-optional end topics: add advanced makefile	.
 	 syntax
 	 (branches depending on ther branches, $@, $^)
@@ -81,7 +81,9 @@
 	 static const int *SCIP = &I;
 	 SCIP = &psyche; // possible
 	 ```
-	
+
+	-add as last chapter? file read and write	.
+
 	-memory, please					.
 		-the little song thingy				.
 		 The stdlib doesn't really give runtime

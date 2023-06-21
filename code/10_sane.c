@@ -34,7 +34,7 @@ int main(void)
 
 	case 68:
 		my_number++;
-		break;
+		/* fallthrough */
 
 	case 101:
 		my_number /= 2;

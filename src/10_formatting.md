@@ -36,7 +36,10 @@ if ((num % 2) == 0)
 ```
 
 is also a common way to put curly brackets or handle indentation.  
-It is up to your preference or the preference of your team leader. Please don't
-ignore him when he is giving you formatting rules for your project.
-The most beautiful formatting doesn't do anything if it is inconsistent with the
-rest of the project.  
+  
+The above here is a small example of the GNU code format but aside from it,
+this book uses the Linux code format.  
+Which format is used depends on your preference or the preference of your team
+leader. Please don't ignore him when he is giving you formatting rules for your
+project. The most beautiful formatting doesn't do anything if it is inconsistent
+with the rest of the project.  

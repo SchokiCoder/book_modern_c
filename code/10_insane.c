@@ -23,9 +23,7 @@ int main()
 			if (num_even_or_not) {
 				i_have_a_bad_feeling_about_this = true; }
 			break;
-		case 68:
-			my_number++;
-			break;
+		case 68: my_number++;
 		case 101:
 			my_number /= 2;
 			break;
