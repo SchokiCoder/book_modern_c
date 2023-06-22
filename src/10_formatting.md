@@ -10,7 +10,7 @@ you. Given enough time, not even you yourself.
 I hope i can make my point clear, when quickly demonstrating that:  
 
 ```c
-{{ #include ../code/10_sane.c }}
+{{ #include ../code/10/sane.c }}
 ```
 
 This is normal code, aside from being obviously fictitious. It has consistent,
@@ -18,7 +18,7 @@ sane formatting and comments where needed.
 So let's look at the same code but obfuscated.  
 
 ```c
-{{ #include ../code/10_insane.c }}
+{{ #include ../code/10/insane.c }}
 ```
 
 That the readability is making a nosedive here is hopefully not up to debate.

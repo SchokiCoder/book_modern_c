@@ -12,7 +12,7 @@ This is a simple example, in which we have a number and want to set it to 1 if
 it is not already, otherwise it should become zero:  
 
 ```c
-{{ #include ../code/5_if.c }}
+{{ #include ../code/5/if.c }}
 ```
 
 "num" is set to zero, then with `!=` we check if "num" is **not** equal to
@@ -25,7 +25,7 @@ With `num == 1` it is checked to be equal to 1 and as a result set back to 0.
 0?"  
 
 ```c
-{{ #include ../code/5_else.c }}
+{{ #include ../code/5/else.c }}
 ```
 
 This makes much more sense to write. Not only do we not need to explicitly check
@@ -35,7 +35,7 @@ So we check for "num" to be not 1 and react accordingly. Now what if we also
 need to check a special case in which "num" is 43?  
 
 ```c
-{{ #include ../code/5_else_if.c }}
+{{ #include ../code/5/else_if.c }}
 ```
 
 Yup, you can chain an if onto an else and you can do that as often as you like.
@@ -46,7 +46,7 @@ By the way the brackets for if are optional as long as you have just one
 statement.  
 
 ```c
-{{ #include ../code/5_no_brackets.c }}
+{{ #include ../code/5/no_brackets.c }}
 ```
 
 Some discourage that format, i do not.  
@@ -58,7 +58,7 @@ conditions are no exception for that. If we now have to check if "num" is 68,
 43, 101 or 7 we instead use switches.  
 
 ```c
-{{ #include ../code/5_switch.c }}
+{{ #include ../code/5/switch.c }}
 ```
 
 Much better to write and read. Use switches when appropriate and with care.
@@ -88,7 +88,7 @@ in the C language and even now it just exists as a band-aid-patch. It is not
 usable just like that. You have to import it, as seen below.  
 
 ```c
-{{ #include ../code/5_boolean.c }}
+{{ #include ../code/5/boolean.c }}
 ```
 
 What exactly "include" does will be explained later so don't worry. All that you
@@ -105,7 +105,7 @@ Sometimes multiple cases shall lead to the same outcome and for that case we
 have special operators.  
 
 ```c
-{{ #include ../code/5_logical.c }}
+{{ #include ../code/5/logical.c }}
 ```
 
 With the second `if` we check if "num" is 23 AND check if "num_even" is true.

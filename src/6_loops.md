@@ -8,7 +8,7 @@ Thanks to the starting values of those 3 variables we can ensure that the "a"
 will increase over time and the loop eventually exits.  
 
 ```c
-{{ #include ../code/6_while.c }}
+{{ #include ../code/6/while.c }}
 ```
 
 A loop has a head `while ()` and a body `{ ... }`.  
@@ -23,7 +23,7 @@ runs it's body and then it checks the condition in the head or in this case
 foot.  
 
 ```c
-{{ #include ../code/6_do_while.c }}
+{{ #include ../code/6/do_while.c }}
 ```
 
 In my experience, this is the least used loop but definitely not useless. You
@@ -34,7 +34,7 @@ before the loop starts, the condition and a statement that runs after each time
 the loop body ran.  
 
 ```c
-{{ #include ../code/6_for.c }}
+{{ #include ../code/6/for.c }}
 ```
 
 Before this for loop runs we set the integer i to 0. Separate that statement
@@ -53,7 +53,7 @@ keywords "continue" and "break".
 This could look like so:  
 
 ```c
-{{ #include ../code/6_loop_control.c }}
+{{ #include ../code/6/loop_control.c }}
 ```
 
 It's kind of a nonsensical example but it's good enough for demonstration.  

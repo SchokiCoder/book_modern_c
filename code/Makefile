@@ -1,179 +1,174 @@
 CC = cc
 COPTS = -std=c99 -pedantic -Wall -Wextra -Werror -g
-TARGET_PATH = target
 
-all: ${TARGET_PATH}\
-	1_barebones \
-	2_constants 2_variables\
-	3_functions\
-	4_increment_basic 4_increment_return\
-	5_if 5_else 5_else_if 5_no_brackets 5_switch 5_boolean 5_logical\
-	6_while 6_do_while 6_for 6_loop_control\
-	7_printf\
-	8_array\
-	9_comments 9_genius 9_self_explanatory\
-	10_sane 10_insane\
-	12_include.o 12_floatstuff.o 12_intstuff.o\
-	13_globals\
-	14_return_parameter 14_malloc 14_const_size\
-	15_messenger 15_typedef\
-	16_enum 16_enum_vals.o\
-	17_flip 17_data_loss 17_implicit\
-	19_faulty 19_correct\
-	20_generics\
-	21_string_reverse\
-	22_fixsizeint 22_evil_goto 22_float 22_cstrings 22_static
+all:	1/barebones \
+	2/constants 2/variables\
+	3/functions\
+	4/increment_basic 4/increment_return\
+	5/if 5/else 5/else_if 5/no_brackets 5/switch 5/boolean 5/logical\
+	6/while 6/do_while 6/for 6/loop_control\
+	7/printf\
+	8/array\
+	9/comments 9/genius 9/self_explanatory\
+	10/sane 10/insane\
+	13/include.o 13/floatstuff.o 13/intstuff.o\
+	14/globals\
+	15/return_parameter 15/malloc 15/const_size\
+	17/messenger 17/typedef\
+	18/enum 18/enum_vals.o\
+	19/flip 19/data_loss 19/implicit\
+	21/faulty 21/correct\
+	22/generics\
+	23/string_reverse\
+	24/fixsizeint 24/evil_goto 24/float 24/cstrings 24/static
 
-1_barebones: 1_barebones.c
-	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+1/barebones: 1/barebones.c
+	$(CC) ${COPTS} -o $@ $^
 
-2_constants: 2_constants.c
-	$(CC) ${COPTS} -Wno-unused -o ${TARGET_PATH}/$@ $^
+2/constants: 2/constants.c
+	$(CC) ${COPTS} -Wno-unused -o $@ $^
 
-2_variables: 2_variables.c
-	$(CC) ${COPTS} -Wno-unused -o ${TARGET_PATH}/$@ $^
+2/variables: 2/variables.c
+	$(CC) ${COPTS} -Wno-unused -o $@ $^
 
-3_functions: 3_functions.c
-	$(CC) ${COPTS} -Wno-unused -o ${TARGET_PATH}/$@ $^
+3/functions: 3/functions.c
+	$(CC) ${COPTS} -Wno-unused -o $@ $^
 
-4_increment_basic: 4_increment_basic.c
-	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+4/increment_basic: 4/increment_basic.c
+	$(CC) ${COPTS} -o $@ $^
 
-4_increment_return: 4_increment_return.c
-	$(CC) ${COPTS} -Wno-unused -o ${TARGET_PATH}/$@ $^
+4/increment_return: 4/increment_return.c
+	$(CC) ${COPTS} -Wno-unused -o $@ $^
 
-5_if: 5_if.c
-	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+5/if: 5/if.c
+	$(CC) ${COPTS} -o $@ $^
 
-5_else: 5_else.c
-	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+5/else: 5/else.c
+	$(CC) ${COPTS} -o $@ $^
 
-5_else_if: 5_else_if.c
-	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+5/else_if: 5/else_if.c
+	$(CC) ${COPTS} -o $@ $^
 
-5_no_brackets: 5_no_brackets.c
-	$(CC) ${COPTS} -Wno-uninitialized -o ${TARGET_PATH}/$@ $^
+5/no_brackets: 5/no_brackets.c
+	$(CC) ${COPTS} -Wno-uninitialized -o $@ $^
 
-5_switch: 5_switch.c
-	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+5/switch: 5/switch.c
+	$(CC) ${COPTS} -o $@ $^
 
-5_boolean: 5_boolean.c
-	$(CC) ${COPTS} -Wno-unused -o ${TARGET_PATH}/$@ $^
+5/boolean: 5/boolean.c
+	$(CC) ${COPTS} -Wno-unused -o $@ $^
 
-5_logical: 5_logical.c
-	$(CC) ${COPTS} -Wno-unused -o ${TARGET_PATH}/$@ $^
+5/logical: 5/logical.c
+	$(CC) ${COPTS} -Wno-unused -o $@ $^
 
-6_while: 6_while.c
-	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+6/while: 6/while.c
+	$(CC) ${COPTS} -o $@ $^
 
-6_do_while: 6_do_while.c
-	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+6/do_while: 6/do_while.c
+	$(CC) ${COPTS} -o $@ $^
 
-6_for: 6_for.c
-	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+6/for: 6/for.c
+	$(CC) ${COPTS} -o $@ $^
 
-6_loop_control: 6_loop_control.c
-	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+6/loop_control: 6/loop_control.c
+	$(CC) ${COPTS} -o $@ $^
 
-7_printf: 7_printf.c
-	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+7/printf: 7/printf.c
+	$(CC) ${COPTS} -o $@ $^
 
-8_array: 8_array.c
-	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+8/array: 8/array.c
+	$(CC) ${COPTS} -o $@ $^
 
-9_comments: 9_comments.c
-	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+9/comments: 9/comments.c
+	$(CC) ${COPTS} -o $@ $^
 
-9_genius: 9_genius.c
-	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+9/genius: 9/genius.c
+	$(CC) ${COPTS} -o $@ $^
 
-9_self_explanatory: 9_self_explanatory.c
-	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+9/self_explanatory: 9/self_explanatory.c
+	$(CC) ${COPTS} -o $@ $^
 
-10_sane: 10_sane.c
-	$(CC) ${COPTS} -Wno-unused -o ${TARGET_PATH}/$@ $^
+10/sane: 10/sane.c
+	$(CC) ${COPTS} -Wno-unused -o $@ $^
 
-10_insane: 10_insane.c
+10/insane: 10/insane.c
 	$(CC) ${COPTS} -Wno-unused -Wno-implicit-fallthrough \
-		-o ${TARGET_PATH}/$@ $^
+		-o $@ $^
 
-12_include.o: 12_include.c
-	touch my_file.h
-	$(CC) ${COPTS} -c -o ${TARGET_PATH}/$@ $^
-	rm my_file.h
+13/include.o: 13/include.c
+	touch 13/my_file.h
+	$(CC) ${COPTS} -c -o $@ $^
+	rm 13/my_file.h
 
-12_floatstuff.o: 12_floatstuff.c
-	$(CC) ${COPTS} -c -o ${TARGET_PATH}/$@ $^
+13/floatstuff.o: 13/floatstuff.c
+	$(CC) ${COPTS} -c -o $@ $^
 
-12_intstuff.o: 12_intstuff.c
-	$(CC) ${COPTS} -c -o ${TARGET_PATH}/$@ $^
+13/intstuff.o: 13/intstuff.c
+	$(CC) ${COPTS} -c -o $@ $^
 
-13_globals: 13_globals.c
-	$(CC) ${COPTS} -Wno-unused -o ${TARGET_PATH}/$@ $^
+14/globals: 14/globals.c
+	$(CC) ${COPTS} -Wno-unused -o $@ $^
 
 # not in all (intentionally fails to compile)
-13_namespaces: 13_namespaces.c
-	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+14/namespaces: 14/namespaces.c
+	$(CC) ${COPTS} -o $@ $^
 
-14_return_parameter: 14_return_parameter.c
-	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+15/return_parameter: 15/return_parameter.c
+	$(CC) ${COPTS} -o $@ $^
 
-14_malloc: 14_malloc.c
-	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+15/malloc: 15/malloc.c
+	$(CC) ${COPTS} -o $@ $^
 	
-14_const_size: 14_const_size.c
-	$(CC) ${COPTS} -Wno-uninitialized -o ${TARGET_PATH}/$@ $^
+15/const_size: 15/const_size.c
+	$(CC) ${COPTS} -Wno-uninitialized -o $@ $^
 
-15_messenger: 15_messenger.c
-	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+17/messenger: 17/messenger.c
+	$(CC) ${COPTS} -o $@ $^
 
-15_typedef: 15_typedef.c
-	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+17/typedef: 17/typedef.c
+	$(CC) ${COPTS} -o $@ $^
 
-16_enum: 16_enum.c
-	$(CC) ${COPTS} -Wno-unused -o ${TARGET_PATH}/$@ $^
+18/enum: 18/enum.c
+	$(CC) ${COPTS} -Wno-unused -o $@ $^
 
-16_enum_vals.o: 16_enum_vals.c
-	$(CC) ${COPTS} -c -o ${TARGET_PATH}/$@ $^
+18/enum_vals.o: 18/enum_vals.c
+	$(CC) ${COPTS} -c -o $@ $^
 
-17_flip: 17_flip.c
-	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+19/flip: 19/flip.c
+	$(CC) ${COPTS} -o $@ $^
 
-17_data_loss: 17_data_loss.c
-	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+19/data_loss: 19/data_loss.c
+	$(CC) ${COPTS} -o $@ $^
 
-17_implicit: 17_implicit.c
-	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+19/implicit: 19/implicit.c
+	$(CC) ${COPTS} -o $@ $^
 
-19_faulty: 19_faulty.c 19_faulty_string.c 19_string_utils.c
-	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+21/faulty: 21/faulty.c 21/faulty_string.c 21/string_utils.c
+	$(CC) ${COPTS} -o $@ $^
 
-19_correct: 19_correct.c 19_correct_string.c 19_string_utils.c
-	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+21/correct: 21/correct.c 21/correct_string.c 21/string_utils.c
+	$(CC) ${COPTS} -o $@ $^
 
-20_generics: 20_generics.c
-	$(CC) ${COPTS} -std=c11 -o ${TARGET_PATH}/$@ $^
+20/generics: 20/generics.c
+	$(CC) ${COPTS} -std=c11 -o $@ $^
 
-21_string_reverse: 21_string_reverse.c
-	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+23/string_reverse: 23/string_reverse.c
+	$(CC) ${COPTS} -o $@ $^
 
-22_fixsizeint: 22_fixsizeint.c
-	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+24/fixsizeint: 24/fixsizeint.c
+	$(CC) ${COPTS} -o $@ $^
 
-22_evil_goto: 22_evil_goto.c
-	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+24/evil_goto: 24/evil_goto.c
+	$(CC) ${COPTS} -o $@ $^
 
-22_float: 22_float.c
-	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+24/float: 24/float.c
+	$(CC) ${COPTS} -o $@ $^
 
-22_cstrings: 22_cstrings.c
-	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+24/cstrings: 24/cstrings.c
+	$(CC) ${COPTS} -o $@ $^
 
-22_static: 22_static.c
-	$(CC) ${COPTS} -o ${TARGET_PATH}/$@ $^
+24/static: 24/static.c
+	$(CC) ${COPTS} -o $@ $^
 
 clean:
-	rm -f ${TARGET_PATH}/*
-
-${TARGET_PATH}:
-	mkdir ${TARGET_PATH}
+	rm -f */*.o

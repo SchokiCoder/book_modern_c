@@ -19,7 +19,7 @@ Comments are little notes that you put into your code. Optimally you use them in
 a way to describe what the upcoming section of code will do.  
 
 ```c
-{{ #include ../code/9_comments.c }}
+{{ #include ../code/9/comments.c }}
 ```
 
 See above we have a "//" and then one quick statement on what the developer
@@ -36,7 +36,7 @@ That means, please keep yourself from explaining literally EVERYTHING to a
 potential reader.  
 
 ```c
-{{ #include ../code/9_genius.c }}
+{{ #include ../code/9/genius.c }}
 ```
 
 No one needs a refresher lesson in C every time they work with it. Everyone
@@ -74,7 +74,7 @@ in a specific way.
 If your symbols explain themselves, then no comments are needed.  
 
 ```c
-{{ #include ../code/9_self_explanatory.c }}
+{{ #include ../code/9/self_explanatory.c }}
 ```
 
 This is a simple example with just one extra function but shows what is

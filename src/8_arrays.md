@@ -3,7 +3,7 @@
 An array is way to hold a lot of variables in one name.  
 
 ```c
-{{ #include ../code/8_array.c }}
+{{ #include ../code/8/array.c }}
 ```
 
 When brackets with a number are given next to the variable name in the

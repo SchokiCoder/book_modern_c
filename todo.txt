@@ -65,11 +65,18 @@
 	-optional topics: undefined behavior: add	v
 	 fixed size ints
 
-	-typo check new chapters			.
+	-typo check new chapters			v
 	 (input, fileio)
-	-integrate stdin (must be before fileio)	.
-	-integrate fileio (must be after stdin)		.
+	-integrate stdin (must be before fileio)	v
+	-integrate fileio (must be after stdin)		v
+	-code: add dir structure			v
+	 moving stuff around without it is pain
+
 	-optional topics: strings: add security		.
+	-build routines move to after include		.
+	-build routines: add headers to prerequisites	.
+	-code/Makefile: add headers to prerequisites	.
+	-code/Makefile: add clean			.
 
 	-optional topics: add advanced scope rules	.
 		-wip add example for extern			.

@@ -5,7 +5,7 @@ I think the best way to learn the basic usage of this feature is to look and try
 it out yourself:  
 
 ```c
-{{ #include ../code/7_printf.c }}
+{{ #include ../code/7/printf.c }}
 ```
 
 Quick facts:  
