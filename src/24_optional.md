@@ -132,7 +132,7 @@ remember how long this string is, for as long as it exists.
   
 Also there is a difference in where this data is saved. The actual string of
 "ptr" has been baked into the binary file. While the array-based strings are in
-the stack. This also comes with funny side-effect that you cannot change
+the stack. This also comes with the funny side-effect that you cannot change
 anything within "ptr". If you try to change a character within you will be
 granted a segfault.  
   
@@ -143,6 +143,13 @@ One of the reason why they are bad is, in order to process that string you would
 have to step through each char of the string and check if it is the null-char
 **before** you can actually work with it. Imagine stepping through hundreds of
 char’s each time having this check. Say goodbye to performance in that case.  
+  
+If the length available in a string is not checked while working with the
+consequences can be fatal for your users.  
+Strings are a very common attack vector.  
+For example if you copy one string to another but the destination string doesn't
+have enough space **and** the length of the copy operation is not limited, you
+end up overwriting other data.  
 
 ## Advanced scope rules
 

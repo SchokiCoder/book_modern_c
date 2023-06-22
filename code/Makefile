@@ -11,7 +11,7 @@ all:	1/barebones \
 	8/array\
 	9/comments 9/genius 9/self_explanatory\
 	10/sane 10/insane\
-	13/include.o 13/floatstuff.o 13/intstuff.o\
+	12/include.o 12/floatstuff.o 12/intstuff.o\
 	14/globals\
 	15/return_parameter 15/malloc 15/const_size\
 	17/messenger 17/typedef\
@@ -95,16 +95,16 @@ all:	1/barebones \
 	$(CC) ${COPTS} -Wno-unused -Wno-implicit-fallthrough \
 		-o $@ $^
 
-13/include.o: 13/include.c
-	touch 13/my_file.h
+12/include.o: 12/include.c
+	touch 12/my_file.h
 	$(CC) ${COPTS} -c -o $@ $^
-	rm 13/my_file.h
+	rm 12/my_file.h
 
-13/floatstuff.o: 13/floatstuff.c
-	$(CC) ${COPTS} -c -o $@ $^
+12/floatstuff.o: 12/floatstuff.c 12/correct_floatstuff.h
+	$(CC) ${COPTS} -c -o $@ $<
 
-13/intstuff.o: 13/intstuff.c
-	$(CC) ${COPTS} -c -o $@ $^
+12/intstuff.o: 12/intstuff.c 12/intstuff.h
+	$(CC) ${COPTS} -c -o $@ $<
 
 14/globals: 14/globals.c
 	$(CC) ${COPTS} -Wno-unused -o $@ $^

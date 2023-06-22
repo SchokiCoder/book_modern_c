@@ -9,17 +9,17 @@ D_lib_math_test: d_main.o d_lib.o
 lib_math_test: main.o lib.o
 	$(CC) ${R_COPTS} -o $@ $^
 
-d_main.o: main.c
-	$(CC) ${D_COPTS} -c -o $@ $^
+d_main.o: main.c lib.h
+	$(CC) ${D_COPTS} -c -o $@ $<
 
-d_lib.o: lib.c
-	$(CC) ${D_COPTS} -c -o $@ $^
+d_lib.o: lib.c lib.h
+	$(CC) ${D_COPTS} -c -o $@ $<
 
-main.o: main.c
-	$(CC) ${R_COPTS} -c -o $@ $^
+main.o: main.c lib.h
+	$(CC) ${R_COPTS} -c -o $@ $<
 
-lib.o: lib.c
-	$(CC) ${R_COPTS} -c -o $@ $^
+lib.o: lib.c lib.h
+	$(CC) ${R_COPTS} -c -o $@ $<
 
 clean:
 	rm -f *.o

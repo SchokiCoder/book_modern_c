@@ -72,10 +72,10 @@
 	-code: add dir structure			v
 	 moving stuff around without it is pain
 
-	-optional topics: strings: add security		.
-	-build routines move to after include		.
-	-build routines: add headers to prerequisites	.
-	-code/Makefile: add headers to prerequisites	.
+	-optional topics: strings: add security		v
+	-build routines move to after include		v
+	-Makefiles: add headers to prerequisites	.
+	 (21 missing)
 	-code/Makefile: add clean			.
 
 	-optional topics: add advanced scope rules	.

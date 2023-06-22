@@ -10,7 +10,7 @@ header files with the ending ".h".
 Includes can look like this:  
 
 ```c
-{{ #include ../code/13/include.c }}
+{{ #include ../code/12/include.c }}
 ```
 
 The difference between < and " is where the preprocessor first looks for the
@@ -44,7 +44,7 @@ header files.
 The following technique is called header guards.  
 
 ```c
-{{ #include ../code/13/small_floatstuff.h }}
+{{ #include ../code/12/small_floatstuff.h }}
 ```
 
 Here we have instructions for the preprocessor. These begin with a '#'
@@ -59,7 +59,7 @@ preprocessor just ignores it.
 Imagine having a header file: "floatstuff.h":  
 
 ```c
-{{ #include ../code/13/faulty_floatstuff.h }}
+{{ #include ../code/12/faulty_floatstuff.h }}
 ```
 
 Here we have the function "floatadd", which is declared and defined. This can
@@ -70,13 +70,13 @@ By moving the implementation of the function into a respective "floatstuff.c"
 file:  
 
 ```c
-{{ #include ../code/13/floatstuff.c }}
+{{ #include ../code/12/floatstuff.c }}
 ```
 
 After that the header looks like so:
 
 ```c
-{{ #include ../code/13/correct_floatstuff.h }}
+{{ #include ../code/12/correct_floatstuff.h }}
 ```
 
 We don't need the function body anymore (the implementation) and we don't even
@@ -111,11 +111,11 @@ So practically a template for those two files could look like this:
 header:  
 
 ```c
-{{ #include ../code/13/template.h }}
+{{ #include ../code/12/template.h }}
 ```
 
 c-file:  
 
 ```c
-{{ #include ../code/13/template.c }}
+{{ #include ../code/12/template.c }}
 ```
