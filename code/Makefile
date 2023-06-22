@@ -2,25 +2,26 @@ CC = cc
 COPTS = -std=c99 -pedantic -Wall -Wextra -Werror -g
 
 all:	1/barebones \
-	2/constants 2/variables\
-	3/functions\
-	4/increment_basic 4/increment_return\
-	5/if 5/else 5/else_if 5/no_brackets 5/switch 5/boolean 5/logical\
-	6/while 6/do_while 6/for 6/loop_control\
-	7/printf\
-	8/array\
-	9/comments 9/genius 9/self_explanatory\
-	10/sane 10/insane\
-	12/include.o 12/floatstuff.o 12/intstuff.o\
-	14/globals\
-	15/return_parameter 15/malloc 15/const_size\
-	17/messenger 17/typedef\
-	18/enum 18/enum_vals.o\
-	19/flip 19/data_loss 19/implicit\
-	21/faulty 21/correct\
-	22/generics\
-	23/string_reverse\
-	24/fixsizeint 24/evil_goto 24/float 24/cstrings 24/static
+	2/constants 2/variables \
+	3/functions \
+	4/increment_basic 4/increment_return \
+	5/if 5/else 5/else_if 5/no_brackets 5/switch 5/boolean 5/logical \
+	6/while 6/do_while 6/for 6/loop_control \
+	7/printf \
+	8/array \
+	9/comments 9/genius 9/self_explanatory \
+	10/sane 10/insane 10/gnu \
+	12/include.o 12/floatstuff.o 12/intstuff.o \
+	14/globals \
+	15/return_parameter 15/malloc 15/const_size \
+	17/messenger 17/typedef \
+	18/enum 18/enum_vals.o \
+	19/flip 19/data_loss 19/implicit \
+	21/faulty 21/correct \
+	22/generics \
+	23/string_reverse \
+	24/fixsizeint 24/evil_goto 24/float 24/const_fraud 24/cstrings \
+	24/static 24/shl_use
 
 1/barebones: 1/barebones.c
 	$(CC) ${COPTS} -o $@ $^
@@ -95,6 +96,9 @@ all:	1/barebones \
 	$(CC) ${COPTS} -Wno-unused -Wno-implicit-fallthrough \
 		-o $@ $^
 
+10/gnu: 10/gnu.c
+	$(CC) ${COPTS} -Wno-unused -o $@ $^
+
 12/include.o: 12/include.c
 	touch 12/my_file.h
 	$(CC) ${COPTS} -c -o $@ $^
@@ -143,13 +147,28 @@ all:	1/barebones \
 19/implicit: 19/implicit.c
 	$(CC) ${COPTS} -o $@ $^
 
-21/faulty: 21/faulty.c 21/faulty_string.c 21/string_utils.c
+21/faulty: 21/faulty.o 21/faulty_string.o 21/string_utils.o
 	$(CC) ${COPTS} -o $@ $^
 
-21/correct: 21/correct.c 21/correct_string.c 21/string_utils.c
+21/correct: 21/correct.o 21/correct_string.o 21/string_utils.o
 	$(CC) ${COPTS} -o $@ $^
 
-20/generics: 20/generics.c
+21/faulty.o: 21/faulty.c 21/string.h 21/faulty_string.c
+	$(CC) ${COPTS} -c -o $@ $<
+
+21/faulty_string.o: 21/faulty_string.c 21/string.h
+	$(CC) ${COPTS} -c -o $@ $<
+
+21/correct.o: 21/correct.c 21/string.h 21/correct_string.c
+	$(CC) ${COPTS} -c -o $@ $<
+
+21/correct_string.o: 21/correct_string.c 21/string.h
+	$(CC) ${COPTS} -c -o $@ $<
+
+21/string_utils.o: 21/string_utils.c 21/string_utils.h
+	$(CC) ${COPTS} -c -o $@ $<
+
+22/generics: 22/generics.c
 	$(CC) ${COPTS} -std=c11 -o $@ $^
 
 23/string_reverse: 23/string_reverse.c
@@ -164,11 +183,17 @@ all:	1/barebones \
 24/float: 24/float.c
 	$(CC) ${COPTS} -o $@ $^
 
+24/const_fraud: 24/const_fraud.c
+	$(CC) ${COPTS} -o $@ $^
+
 24/cstrings: 24/cstrings.c
 	$(CC) ${COPTS} -o $@ $^
 
 24/static: 24/static.c
 	$(CC) ${COPTS} -o $@ $^
+
+24/shl_use: 24/shl_use.c 24/shl.h
+	$(CC) ${COPTS} -o $@ $<
 
 clean:
 	rm -f */*.o

@@ -73,6 +73,43 @@ You take this instead:
 `printf("%1.20f\n", f);`  
 and you will see how deep the rabbit hole goes.  
 
+## In C const's are bonkers
+
+By "const's" i mean variables with the `const` keyword.  
+They are not fully protected by the compiler against change so that this:
+
+```c
+{{ #include ../code/24/const_fraud.c }}
+```
+
+actually compiles **without any warning despite -Wall and -Wextra!**  
+The compiler **may** place the value in read-only memory or not.  
+So this **may** fail at runtime... or not.  
+  
+This wouldn't be possible with the **true** constants of C... values.
+You can use the preprocessor to practically give a constant value a name.  
+
+```c
+#define CONSTI 10
+```
+
+If you replace the `const int` from before with that, it doesn't compile.  
+Same would technically also work for an anonymous enum:  
+
+```c
+enum {
+    CONSTI = 10
+};
+```
+
+With that you cannot control the type of your value however.  
+With a preprocessor definition you could stuff like that:  
+
+```c
+#define CONSTI 10ul
+#define CONSTF 10.5f
+```
+
 ## C and strings
 
 Originally text output was supposed to just happen at the end of this book. As
@@ -210,3 +247,67 @@ Object                  | storage duration | linkage
 variable at block scope | automatic        | none
 variable at file scope  | static           | internal
 function                | nothing to store | external
+
+## Linking files
+
+This is the process of stitching the application together from multiple
+pieces.  
+The reason why we can use things like "printf" is because we include "stdio.h"
+from the standard library. This library is automatically linked to our program
+out of convenience.  
+  
+For other external libraries or our own c-files in case we have multiple for one
+project we need to explicitly link these parts together.  
+This has already been demonstrated in the build routines chapter.  
+Multiple c-files are compiled into their respective o-file and they then get
+linked into the actual executable binary by just listing them in the compile
+command.  
+Example: `clang main.o lib.o -o executable`  
+  
+There are two kinds of library objects: "statically" and "dynamically" linked
+libraries.  
+In order to link a library a path must be given. Most operating systems have a
+path environment variable already set up which allows you to just drop the
+library in that predestined directory.
+After that you must (in the case of gcc and clang) give the -l option with the
+library name.  
+Example: `clang main.o -l SDL2 -o executable`  
+  
+If you path environment variable can't be set or you can't add your library into
+that directory you can also explicitly tell the compiler where to find libraries
+with for example `-L ../mylibs/`.  
+This is sometimes also necessary for the header includes like:  
+
+```C
+#include <SDL.h>
+```
+
+This is also based on that path environment variable.  
+The compiler option "-I" lets you give a path for includes.  
+
+## Single header libraries (SHL's)
+
+Do you think that the linking business from before is bonkers?  
+Boy, do i have something to sell you.  
+  
+Single header libraries are what the name says. The **entire library** is in one
+header file. You include it and then it's there.  
+Well okay it's not that easy after all.  
+
+Remember recursive file inclusion, yeah you do.  
+_(If not, it's mentioned in the include chapter)_  
+  
+SHL's do combat this issue by utilizing the preprocessor.  
+
+```c
+{{ #include ../code/24/shl.h }}
+```
+
+So to actually use this, you must define the IMPL symbol **before** you include
+the header.  
+You must also then keep track of just define this symbol once where it is needed
+or else you will be plagued by multiple function definitions etc.  
+
+```c
+{{ #include ../code/24/shl_use.c }}
+```

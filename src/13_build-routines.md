@@ -59,6 +59,7 @@ Now let's focus on the first branch `lib_math_test:`
 - in the call `$(CC) ${R_COPTS} -o $@ $^` they get linked into the binary
 - $@ refers to the branch or file name
 - $^ refers to the dependencies of that branch
+- $< refers to the first dependency of that branch
 
 _Huff, breathe_  
 So... in the end this call looks like this:  

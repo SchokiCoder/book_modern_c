@@ -29,16 +29,16 @@ is not worth the price.
 Of course there is also no one right way to do it. For example this:  
 
 ```c
-if ((num % 2) == 0)
-{
-  num_even = true;
-}
+{{ #include ../code/10/gnu.c }}
 ```
 
-is also a common way to put curly brackets or handle indentation.  
+is a small example of the GNU code format.  
   
-The above here is a small example of the GNU code format but aside from it,
-this book uses the Linux code format.  
+Aside from it, this book uses the Linux code format with a maximal line length
+of 80.  
+I prefer that because it forces you to keep the amount of indentations low which
+keeps code complexity mostly low as well.  
+  
 Which format is used depends on your preference or the preference of your team
 leader. Please don't ignore him when he is giving you formatting rules for your
 project. The most beautiful formatting doesn't do anything if it is inconsistent
