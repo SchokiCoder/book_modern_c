@@ -76,6 +76,9 @@ and you will see how deep the rabbit hole goes.
 ## In C const's are bonkers
 
 By "const's" i mean variables with the `const` keyword.  
+This is what i previously called constants but there is one itsy bit of a
+problem...  
+they are not constant.  
 They are not fully protected by the compiler against change so that this:
 
 ```c
@@ -86,14 +89,18 @@ actually compiles **without any warning despite -Wall and -Wextra!**
 The compiler **may** place the value in read-only memory or not.  
 So this **may** fail at runtime... or not.  
   
-This wouldn't be possible with the **true** constants of C... values.
-You can use the preprocessor to practically give a constant value a name.  
+This wouldn't be possible with the **true** constants of C... values.  
+Now that doesn't mean that we have give the concept of constants up.  
+Luckily, we can use the preprocessor to practically create a true constant.  
 
 ```c
 #define CONSTI 10
 ```
 
-If you replace the `const int` from before with that, it doesn't compile.  
+This creates a symbol "CONSTI" which will then replace it's occurences with that
+value next to it.
+If you replace the `const int` from before with that, it doesn't compile
+anymore.  
 Same would technically also work for an anonymous enum:  
 
 ```c
@@ -102,8 +109,8 @@ enum {
 };
 ```
 
-With that you cannot control the type of your value however.  
-With a preprocessor definition you could stuff like that:  
+With that you cannot control the type of your value however, so... not good.  
+Whereas with a preprocessor definition you can do that:  
 
 ```c
 #define CONSTI 10ul
@@ -190,9 +197,10 @@ end up overwriting other data.
 
 ## Advanced scope rules
 
-So far i have just mentioned that a variable from a function cannot be used in
-another function but there is a lot more to scope rules.  
-Normally when a variable reaches the end of it's scope, it stops existing.  
+So far i have just mentioned that a variable from within a function cannot be
+used in another function but there is a lot more to the scope rules.  
+Normally when a variable reaches the end of it's scope, it stops existing and
+it's content is discarded.  
 
 ```c
 {{ #include ../code/24/static.c }}
@@ -202,7 +210,8 @@ This new little keyword in "func" makes "i" preserve it's value between the
 individual calls of the function.  
   
 _Now the surgery is complete_  
-_And mortality is defeated_  
+_and mortality is defeated._  
+_The static grants the power in our lines._
   
 But don't worry it's **not** a global variable it's still just accessible from
 within "func".  
@@ -211,8 +220,10 @@ To continue it's best to split the previously vaguely used term "scope" into
 
 ### storage duration
 
-"i" has a so called "static storage duration", which means it exists for as long
-as our program runs. This also means it is initialized just once.  
+Storage duration tells how long the content of a variables gets stored in
+memory.  
+"i" has the so called "static storage duration", which means it exists for as
+long as our program runs. This also means it is initialized just once.  
   
 On the other side we have the default: "automatic storage duration".  
 It get's created at the start of the block it was declared in and dies with the
@@ -220,6 +231,8 @@ end of the block.
 
 ### linkage
 
+Linkage describes the accessability of a variable aka. from where you can access
+it.  
 There are three kinds of linkage: external, internal and no linkage.  
 
 # TODO
@@ -228,6 +241,9 @@ Example for extern!
 ```c
 {{ #include ../code/24/extern.c }}
 ```
+
+External linkage is important as soon as you involve more than one file in your
+project.  
 
 ### Sum up
 
@@ -251,7 +267,8 @@ function                | nothing to store | external
 ## Linking files
 
 This is the process of stitching the application together from multiple
-pieces.  
+pieces, thus making their content **accessible** to each other.  
+  
 The reason why we can use things like "printf" is because we include "stdio.h"
 from the standard library. This library is automatically linked to our program
 out of convenience.  

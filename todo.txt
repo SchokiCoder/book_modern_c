@@ -88,11 +88,12 @@
 	-add as last chapter? file read and write	v
 	-typo check 10, 24				v
 
+	-code/Makefile: add clean			v
+
+	-typo check 10 and 24 again			.
 	-review new parts in 10 and 24			.
 	-maybe add a "more on linking" note to		.
 	 build routines or include
-	 
-	-code/Makefile: add clean			.
 
 	-optional topics: add advanced scope rules	.
 		-wip add example for extern			.

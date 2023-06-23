@@ -1,7 +1,9 @@
-CC = cc
-COPTS = -std=c99 -pedantic -Wall -Wextra -Werror -g
+CC=cc
+COPTS=-std=c99 -pedantic -Wall -Wextra -Werror -g
 
-all:	1/barebones \
+# These are all targets that **should** compile without problem.
+# Targets that are meant to not compile are left out.
+TARGETS=1/barebones \
 	2/constants 2/variables \
 	3/functions \
 	4/increment_basic 4/increment_return \
@@ -22,6 +24,11 @@ all:	1/barebones \
 	23/string_reverse \
 	24/fixsizeint 24/evil_goto 24/float 24/const_fraud 24/cstrings \
 	24/static 24/shl_use
+
+all: $(TARGETS)
+
+clean:		
+	rm -f $(TARGETS)
 
 1/barebones: 1/barebones.c
 	$(CC) ${COPTS} -o $@ $^
@@ -113,7 +120,7 @@ all:	1/barebones \
 14/globals: 14/globals.c
 	$(CC) ${COPTS} -Wno-unused -o $@ $^
 
-# not in all (intentionally fails to compile)
+# not in TARGETS (intentionally fails to compile)
 14/namespaces: 14/namespaces.c
 	$(CC) ${COPTS} -o $@ $^
 
@@ -194,6 +201,3 @@ all:	1/barebones \
 
 24/shl_use: 24/shl_use.c 24/shl.h
 	$(CC) ${COPTS} -o $@ $<
-
-clean:
-	rm -f */*.o

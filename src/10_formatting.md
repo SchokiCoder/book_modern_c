@@ -36,8 +36,8 @@ is a small example of the GNU code format.
   
 Aside from it, this book uses the Linux code format with a maximal line length
 of 80.  
-I prefer that because it forces you to keep the amount of indentations low which
-keeps code complexity mostly low as well.  
+I prefer that because it forces you to keep the amount of indentations low,
+which keeps code complexity mostly low as well.  
   
 Which format is used depends on your preference or the preference of your team
 leader. Please don't ignore him when he is giving you formatting rules for your
