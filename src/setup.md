@@ -35,11 +35,11 @@ output is something like:
 then you have it. If not try the following commands (depending on your operating
 system):  
 
-| operating system        | command                |
-|-------------------------|------------------------|
-| Debian and Debian-based | `sudo apt install gcc` |
-| Arch and Arch-based:    | `sudo pacman -S gcc`   |
-| Fedora and RHEL-based:  | `sudo dnf install gcc` |
+| operating system         | command                |
+|--------------------------|------------------------|
+| Debian and Debian-based  | `sudo apt install gcc` |
+| Arch and Arch-based:     | `sudo pacman -S gcc`   |
+| Fedora and Fedora-based: | `sudo dnf install gcc` |
 
 ### Windows
 
