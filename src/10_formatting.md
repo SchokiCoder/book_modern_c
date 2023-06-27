@@ -23,8 +23,9 @@ So let's look at the same code but obfuscated.
 
 That the readability is making a nosedive here is hopefully not up to debate.
 Just to name a _few_ issues, the case order is a mess, variable names are...
-there, unlike comments. Well at least it decreased the line-count, too bad this
-is not worth the price.  
+there, unlike comments.  
+Well at least it decreased the line-count, too bad this is not worth the
+price.  
   
 Of course there is also no one right way to do it. For example this:  
 
@@ -39,7 +40,7 @@ of 80.
 I prefer that because it forces you to keep the amount of indentations low,
 which keeps code complexity mostly low as well.  
   
-Which format is used depends on your preference or the preference of your team
-leader. Please don't ignore him when he is giving you formatting rules for your
-project. The most beautiful formatting doesn't do anything if it is inconsistent
-with the rest of the project.  
+Which format is used depends on your preference or the preference of your
+project leader. Please don't ignore him when he is giving you formatting rules
+for your project. The most beautiful formatting doesn't do anything if it is
+inconsistent with the rest of the project.  

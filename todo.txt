@@ -90,14 +90,17 @@
 
 	-code/Makefile: add clean			v
 
-	-typo check 10 and 24 again			.
-	-review new parts in 10 and 24			.
+	-typo check 10 and 24 again			v
+	-review new parts in 10 and 24			v
 	-maybe add a "more on linking" note to		.
 	 build routines or include
 
 	-optional topics: add advanced scope rules	.
 		-wip add example for extern			.
 		-wip review					.
+		-probably a "used where" column is needed	.
+		 for the sum up table, that explains
+		 scope changes
 
 	-memory, please					.
 		-the little song thingy				.
@@ -106,6 +109,8 @@
 		 The song implies this however.
 		 Rephrase song or add "i lied lol. u use c,
 		 there is no hope :P".
+
+	-are all mdbook warnings handled?		.
 
 	-html screws over my tabs, how can i		.
 	 md to pdf while preserving tabs

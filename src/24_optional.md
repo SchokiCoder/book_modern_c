@@ -47,7 +47,7 @@ It allows you to directly jump to certain line in your program, like so:
 
 With larger projects and extensive usage, this will become very hard to keep
 track of very quickly.  
-General rule is: never use this if it is avoidable somehow and it basically
+General rule is: never use this if it is somehow avoidable and it is basically
 always avoidable.  
 
 ## Floats are scary
@@ -69,11 +69,14 @@ I rather just want to raise your awareness about the fact, that floats cannot be
 entirely trusted. Always use their results with a grain of salt and extra
 care... or avoid using them altogether when possible.  
   
+So you can just _carelessly_ take this:  
+`printf("%f\n", f);`  
+and believe whatever you want to believe.  
 You take this instead:  
 `printf("%1.20f\n", f);`  
 and you will see how deep the rabbit hole goes.  
 
-## In C const's are bonkers
+## In C, const's are bonkers
 
 By "const's" i mean variables with the `const` keyword.  
 This is what i previously called constants but there is one itsy bit of a
@@ -97,11 +100,11 @@ Luckily, we can use the preprocessor to practically create a true constant.
 #define CONSTI 10
 ```
 
-This creates a symbol "CONSTI" which will then replace it's occurences with that
-value next to it.
+This creates a symbol "CONSTI" which will then replace it's occurrences with
+that value next to it.
 If you replace the `const int` from before with that, it doesn't compile
 anymore.  
-Same would technically also work for an anonymous enum:  
+Technically anonymous enums also work:  
 
 ```c
 enum {
@@ -113,8 +116,8 @@ With that you cannot control the type of your value however, so... not good.
 Whereas with a preprocessor definition you can do that:  
 
 ```c
-#define CONSTI 10ul
-#define CONSTF 10.5f
+#define CONSTI 10ul     // unsigned long
+#define CONSTF 10.5f    // float
 ```
 
 ## C and strings
@@ -169,7 +172,7 @@ char | arrfit | arrmore | ptr
 
 See how after the 'd' "arrmore" and "ptr" both have a zero while "arrfit" has a
 random number?  
-"arrmore" and "ptr" have null-bytes there signaling that the strings ends.
+"arrmore" and "ptr" have null-bytes there, signaling that the strings ends.
 "arrfit" doesn't have that because we could barely fit the string itself into
 the array. C sneakily just throws the responsibility onto you. You now have to
 remember how long this string is, for as long as it exists.  
@@ -188,12 +191,12 @@ have to step through each char of the string and check if it is the null-char
 **before** you can actually work with it. Imagine stepping through hundreds of
 char’s each time having this check. Say goodbye to performance in that case.  
   
-If the length available in a string is not checked while working with the
+If the length available in a string is not checked while working with it, the
 consequences can be fatal for your users.  
 Strings are a very common attack vector.  
 For example if you copy one string to another but the destination string doesn't
-have enough space **and** the length of the copy operation is not limited, you
-end up overwriting other data.  
+have enough space **or** the length of the copy operation is not limited in the
+first place, you may end up overwriting other data.  
 
 ## Advanced scope rules
 
@@ -226,17 +229,14 @@ memory.
 long as our program runs. This also means it is initialized just once.  
   
 On the other side we have the default: "automatic storage duration".  
-It get's created at the start of the block it was declared in and dies with the
-end of the block.  
+These variables get created at the start of the block they were declared in and
+they die with the end of the block.  
 
 ### linkage
 
-Linkage describes the accessability of a variable aka. from where you can access
-it.  
+Linkage describes the accessibility of a variable, or in other words:  
+from where you can access it.  
 There are three kinds of linkage: external, internal and no linkage.  
-
-# TODO
-Example for extern!
 
 ```c
 {{ #include ../code/24/extern.c }}
@@ -274,7 +274,7 @@ from the standard library. This library is automatically linked to our program
 out of convenience.  
   
 For other external libraries or our own c-files in case we have multiple for one
-project we need to explicitly link these parts together.  
+project, we need to explicitly link these parts together.  
 This has already been demonstrated in the build routines chapter.  
 Multiple c-files are compiled into their respective o-file and they then get
 linked into the actual executable binary by just listing them in the compile
@@ -290,16 +290,16 @@ After that you must (in the case of gcc and clang) give the -l option with the
 library name.  
 Example: `clang main.o -l SDL2 -o executable`  
   
-If you path environment variable can't be set or you can't add your library into
-that directory you can also explicitly tell the compiler where to find libraries
-with for example `-L ../mylibs/`.  
+If your path environment variable can't be set or you can't add your library
+into that directory, you can also explicitly tell the compiler where to find
+libraries with `-L ../mylibs/`.  
 This is sometimes also necessary for the header includes like:  
 
 ```C
 #include <SDL.h>
 ```
 
-This is also based on that path environment variable.  
+This is also based on a path environment variable.  
 The compiler option "-I" lets you give a path for includes.  
 
 ## Single header libraries (SHL's)
@@ -311,7 +311,7 @@ Single header libraries are what the name says. The **entire library** is in one
 header file. You include it and then it's there.  
 Well okay it's not that easy after all.  
 
-Remember recursive file inclusion, yeah you do.  
+Remember "recursive file inclusion", yeah you do.  
 _(If not, it's mentioned in the include chapter)_  
   
 SHL's do combat this issue by utilizing the preprocessor.  
@@ -322,7 +322,7 @@ SHL's do combat this issue by utilizing the preprocessor.
 
 So to actually use this, you must define the IMPL symbol **before** you include
 the header.  
-You must also then keep track of just define this symbol once where it is needed
+You must also then keep track of defining this symbol only where it is needed
 or else you will be plagued by multiple function definitions etc.  
 
 ```c
