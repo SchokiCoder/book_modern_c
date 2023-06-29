@@ -3,7 +3,7 @@
 Now there will be some topics that i think are optional to know but i highly
 recommend reading them if you are interested in _actual_ C programming.  
 If not and you'd rather begin your real programming in another language, skip to
-the chapter "What happens now?".  
+the chapter ["What happens now?"](whatnow.md).  
 
 ## Undefined behavior and co
 
@@ -312,7 +312,7 @@ header file. You include it and then it's there.
 Well okay it's not that easy after all.  
 
 Remember "recursive file inclusion", yeah you do.  
-_(If not, it's mentioned in the include chapter)_  
+_(If not, it's mentioned in the [include chapter](12_include.md))_  
   
 SHL's do combat this issue by utilizing the preprocessor.  
 

@@ -92,6 +92,7 @@
 
 	-typo check 10 and 24 again			v
 	-review new parts in 10 and 24			v
+	-add links for chapter references		v
 	-maybe add a "more on linking" note to		.
 	 build routines or include
 
