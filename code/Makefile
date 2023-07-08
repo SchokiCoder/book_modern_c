@@ -23,12 +23,13 @@ TARGETS=1/barebones \
 	22/generics \
 	23/string_reverse \
 	24/fixsizeint 24/evil_goto 24/float 24/const_fraud 24/cstrings \
-	24/static 24/shl_use
+	24/static 24/shl_use 24/extern
 
 all: $(TARGETS)
 
 clean:		
 	rm -f $(TARGETS)
+	rm -f */*.o
 
 1/barebones: 1/barebones.c
 	$(CC) ${COPTS} -o $@ $^
@@ -201,3 +202,12 @@ clean:
 
 24/shl_use: 24/shl_use.c 24/shl.h
 	$(CC) ${COPTS} -o $@ $<
+
+24/extern.o: 24/extern.c
+	$(CC) ${COPTS} -c -o $@ $<
+
+24/extlib.o: 24/extlib.c 24/extlib.h
+	$(CC) ${COPTS} -c -o $@ $<
+
+24/extern: 24/extern.o 24/extlib.o
+	$(CC) ${COPTS} -o $@ $^

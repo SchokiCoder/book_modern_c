@@ -237,13 +237,27 @@ they die with the end of the block.
 Linkage describes the accessibility of a variable, or in other words:  
 from where you can access it.  
 There are three kinds of linkage: external, internal and no linkage.  
+The following three files show explicit external linkage for a variable.  
 
 ```c
 {{ #include ../code/24/extern.c }}
 ```
 
+```c
+{{ #include ../code/24/extlib.h }}
+```
+
+```c
+{{ #include ../code/24/extlib.c }}
+```
+
 External linkage is important as soon as you involve more than one file in your
 project.  
+Functions are automatically linked externally and variables are not, that's what
+the `extern` keyword makes possible.  
+If a symbol has external linkage it's visible to other files. With internal
+linkage it's visible within the file and no linkage means it's just visible
+within the block it has been declared in.  
 
 ### Sum up
 
@@ -262,7 +276,7 @@ Object                  | storage duration | linkage
 ------------------------|------------------|---------
 variable at block scope | automatic        | none
 variable at file scope  | static           | internal
-function                | nothing to store | external
+function                | baked in binary  | external
 
 ## Linking files
 

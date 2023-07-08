@@ -45,16 +45,16 @@ Normally the operating system gives us plenty of memory to work with in the
 stack.  
 Sometimes programs do some heavier tasks so that won't work.  
 Use more memory.  
-  
-_But with all great things comes a great responsibility,_  
-_that of the programmers being runtime stability._  
-_How, you ask, are they up to the task?_  
-_To which the answer is a simple library._  
 
 ```c
 {{ #include ../code/15/malloc.c }}
 ```
 
+_But with all great things comes a great responsibility,_  
+_that of the programmers being runtime stability._  
+_How, you ask, are they up to the task?_  
+_To which the answer is a disciplined mentality._  
+  
 `malloc` is short for memory allocate and it's parameter is asking how many
 bytes you want. This introduces us to the new operator "sizeof". "sizeof"
 returns how many bytes are used for a given type or variable. After that we

@@ -93,25 +93,18 @@
 	-typo check 10 and 24 again			v
 	-review new parts in 10 and 24			v
 	-add links for chapter references		v
-	-maybe add a "more on linking" note to		.
-	 build routines or include
 
-	-optional topics: add advanced scope rules	.
-		-wip add example for extern			.
-		-wip review					.
-		-probably a "used where" column is needed	.
-		 for the sum up table, that explains
-		 scope changes
+	-optional topics: add advanced scope rules	v
+		-wip add example for extern			v
+		-wip review					v
 
-	-memory, please					.
-		-the little song thingy				.
+	-memory, please					v
+		-the little song thingy				v
 		 The stdlib doesn't really give runtime
 		 stability in the context of memory allocation.
 		 The song implies this however.
 		 Rephrase song or add "i lied lol. u use c,
 		 there is no hope :P".
-
-	-are all mdbook warnings handled?		.
 
 	-html screws over my tabs, how can i		.
 	 md to pdf while preserving tabs
