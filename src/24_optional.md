@@ -126,7 +126,7 @@ Originally text output was supposed to just happen at the end of this book. As
 the book grew i noticed that it becomes very hard to demonstrate things without
 it, so i decided against it.  
   
-"Now why were you so afraid of this, it's not like..." it **sucks**, that's
+"Now why were you so afraid of this, it's not like-" it **sucks**, that's
 why.  
 Not text output by itself but the way it worked all the way back then when C was
 made.  
