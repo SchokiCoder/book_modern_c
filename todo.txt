@@ -1,3 +1,5 @@
+--- done ---
+
 3rd edition {
  	-memory, please: fix typo "work" -> "works"	v
  	-comments: fix typo "print" -> "printf"		v
@@ -120,10 +122,10 @@
 
 	-relicense under ccsa				v
 	-update license in readme.md			v
-	-generate index                                 .
-	-check pdf                                      .
-	-set edition to "3rd"				.
-	 (actually remaking a cover)
+	-generate index                                 x
+	-check pdf                                      v
+	-remake cover                                   v
+	-set edition to "3rd"				v
 }
 
 {

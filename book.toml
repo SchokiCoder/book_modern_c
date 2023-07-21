@@ -6,6 +6,8 @@ src = "src"
 title = "The C Programming Language, a 50 years old foundation"
 create-missing = false
 
+[preprocessor.index]
+
 [output.html]
 git-repository-url = "https://github.com/SchokiCoder/c_50_years_old_foundation"
 

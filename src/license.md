@@ -1,5 +1,0 @@
-# License
-
-```text
-{{ #include ../LICENSE }}
-```

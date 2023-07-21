@@ -1,5 +1,6 @@
 # Summary
 
+- [Cover](./cover.md)
 - [Foreword](./foreword.md)
 - [Explanation of terms](./terms.md)
 - [Setup](./setup.md)
@@ -28,4 +29,3 @@
 - [Roads to Rome](./23_roads.md)
 - [Optional end topics](./24_optional.md)
 - [What happens now?](./whatnow.md)
-- [License](./license.md)
