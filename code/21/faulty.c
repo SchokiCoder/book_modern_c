@@ -3,17 +3,17 @@
 
 int main(void)
 {
-	struct String str_hi = String_from("hi");
-	struct String str_twoplusone = String_new();
+        struct String str_hi = String_from("hi");
+        struct String str_twoplusone = String_new();
 
-	String_append(&str_twoplusone, "two");
-	String_append(&str_twoplusone, " + ");
-	String_append(&str_twoplusone, "one");
+        String_append(&str_twoplusone, "two");
+        String_append(&str_twoplusone, " + ");
+        String_append(&str_twoplusone, "one");
 
-	printf("1: %s\n2: %s\nquick math\n", str_hi.str, str_twoplusone.str);
+        printf("1: %s\n2: %s\nquick math\n", str_hi.str, str_twoplusone.str);
 
-	String_clear(&str_hi);
-	String_clear(&str_twoplusone);
+        String_clear(&str_hi);
+        String_clear(&str_twoplusone);
 
-	return 0;
+        return 0;
 }

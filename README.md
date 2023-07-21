@@ -7,4 +7,4 @@ lower level.
 
 ## License
 
-[GFDLv1.3](https://www.gnu.org/licenses/fdl-1.3.html)
+[CC BY SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode)

@@ -9,7 +9,7 @@ intplusfloat(int a, float b);
 int
 intplusfloat(int a, float b)
 {
-	return a + (int) b;
+        return a + (int) b;
 }
 
 #endif /* SHL_IMPL */

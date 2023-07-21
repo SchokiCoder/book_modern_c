@@ -7,4 +7,4 @@ static const float F1 = 0.1;
 
 float floatadd(float, float);
 
-#endif				/* _CORRECT_FLOATSTUFF_H */
+#endif                                /* _CORRECT_FLOATSTUFF_H */

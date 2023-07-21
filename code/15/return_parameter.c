@@ -2,16 +2,16 @@
 
 void intptr(int *ptr)
 {
-	*ptr = 6;
+        *ptr = 6;
 }
 
 int main(void)
 {
-	int myint = 1;
+        int myint = 1;
 
-	printf("%i\n", myint);
+        printf("%i\n", myint);
 
-	intptr(&myint);
+        intptr(&myint);
 
-	printf("%i\n", myint);
+        printf("%i\n", myint);
 }

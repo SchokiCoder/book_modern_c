@@ -2,5 +2,5 @@
 
 int bogoman(void)
 {
-	return 'b' + 'o' + 'g' + 'o';
+        return 'b' + 'o' + 'g' + 'o';
 }

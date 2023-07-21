@@ -1,7 +1,7 @@
 int main()
 {
-	int my_id;
-	int counter = 0;
+        int my_id;
+        int counter = 0;
 
-	return 0;
+        return 0;
 }

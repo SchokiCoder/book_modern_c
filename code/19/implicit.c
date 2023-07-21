@@ -2,7 +2,7 @@
 
 int main(void)
 {
-	float temp = 10;
+        float temp = 10;
 
-	printf("%f\n", temp);
+        printf("%f\n", temp);
 }

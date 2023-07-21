@@ -6,5 +6,5 @@ int lib_number;
 
 void print_num()
 {
-	printf("the lib num: %i\n", lib_number);
+        printf("the lib num: %i\n", lib_number);
 }

@@ -106,13 +106,24 @@
 		 Rephrase song or add "i lied lol. u use c,
 		 there is no hope :P".
 
-	-html screws over my tabs, how can i		.
+	-html screws over my tabs, how can i		v
 	 md to pdf while preserving tabs
+	 `pandoc -f markdown -t latex
+	 -o book.tex src/setup.md`
+	 `pdflatex book.tex`
+	 They all don't work and
+	 make things just more complicated.
+	 How can i preserve my tabs?
+	 DONT HAVE TABS SHITHEAD!
+	 If god wanted my sanity to live
+	 he would not have created HTML!
 
-	-relicense under ccsa				?
-	-update license in readme.md			?
-	-update index					.
+	-relicense under ccsa				v
+	-update license in readme.md			v
+	-generate index                                 .
+	-check pdf                                      .
 	-set edition to "3rd"				.
+	 (actually remaking a cover)
 }
 
 {

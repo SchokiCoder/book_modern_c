@@ -5,6 +5,6 @@
 
 int main()
 {
-	printf("%i\n", intplusfloat(3, 3.4));
-	return 0;
+        printf("%i\n", intplusfloat(3, 3.4));
+        return 0;
 }

@@ -3,4 +3,4 @@
 
 int bogoman(void);
 
-#endif				/* _INTSTUFF_H */
+#endif                                /* _INTSTUFF_H */

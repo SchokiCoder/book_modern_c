@@ -2,8 +2,8 @@
 
 int some_math(const int a, const int b)
 {
-	if (a > 11)
-		return a + b;
-	else
-		return (a * a) - b;
+        if (a > 11)
+                return a + b;
+        else
+                return (a * a) - b;
 }

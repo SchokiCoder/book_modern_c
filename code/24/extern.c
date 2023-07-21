@@ -2,8 +2,8 @@
 
 int main()
 {
-	lib_number = 55;
-	print_num();
-	
-	return 0;
+        lib_number = 55;
+        print_num();
+        
+        return 0;
 }
