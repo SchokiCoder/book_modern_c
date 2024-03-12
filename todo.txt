@@ -1,3 +1,12 @@
+# Edition 3.1 ?
+
+- switch: add that you can only use numerical types in a switch
+- there are some typos around
+- nit: maybe the whole schtick of
+  "types: ..., void is here but it's only useful later"
+  can be solved in a better way?
+- look for other fixes
+
 --- done ---
 
 3rd edition {
