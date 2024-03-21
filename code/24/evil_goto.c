@@ -2,7 +2,7 @@ int main(void)
 {
         int a = 10, b = 2;
 
-        start:
+start:
 
         if (a == 10)
                 a = 0;

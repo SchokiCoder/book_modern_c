@@ -1,11 +1,17 @@
 # Edition 3.1 ?
 
++ fix malformed goto code example (nametag being indented)
+- lessen goto discouragement a bit and add an example where it's actually useful
+  (cleanup)
+
 - switch: add that you can only use numerical types in a switch
 - there are some typos around
 - nit: maybe the whole schtick of
   "types: ..., void is here but it's only useful later"
   can be solved in a better way?
+
 - look for other fixes
+- set edition
 
 --- done ---
 
