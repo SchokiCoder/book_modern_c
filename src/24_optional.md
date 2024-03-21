@@ -47,8 +47,16 @@ It allows you to directly jump to certain line in your program, like so:
 
 With larger projects and extensive usage, this will become very hard to keep
 track of very quickly.  
-General rule is: never use this if it is somehow avoidable and it is basically
-always avoidable.  
+If you can reasonably avoid it, you probably should.  
+  
+One example where it is encouraged is the [Linux kernel](https://www.kernel.org/doc/html/v4.10/process/coding-style.html#centralized-exiting-of-functions).  
+<https://www.kernel.org/doc/html/v4.10/process/coding-style.html#centralized-exiting-of-functions>  
+The kernel devs say to use when you want to have multiple return points from a
+function but some cleanup work has to be done first, like so:  
+
+```c
+{{ #include ../code/24/good_goto.c }}
+```
 
 ## Floats are scary
 

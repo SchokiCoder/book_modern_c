@@ -22,8 +22,8 @@ TARGETS=1/barebones \
 	21/faulty 21/correct \
 	22/generics \
 	23/string_reverse \
-	24/fixsizeint 24/evil_goto 24/float 24/const_fraud 24/cstrings \
-	24/static 24/shl_use 24/extern
+	24/fixsizeint 24/evil_goto 24/good_goto 24/float 24/const_fraud \
+	24/cstrings 24/static 24/shl_use 24/extern
 
 all: $(TARGETS)
 
@@ -186,6 +186,9 @@ clean:
 	$(CC) ${COPTS} -o $@ $^
 
 24/evil_goto: 24/evil_goto.c
+	$(CC) ${COPTS} -o $@ $^
+
+24/good_goto: 24/good_goto.c
 	$(CC) ${COPTS} -o $@ $^
 
 24/float: 24/float.c
