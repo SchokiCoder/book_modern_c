@@ -5,15 +5,25 @@
   (cleanup)
   https://www.kernel.org/doc/html/v4.10/process/coding-style.html#centralized-exiting-of-functions
 
-- clang now complains about strict prototypes in 1/barebones
++ clang now complains about strict prototypes in 1/barebones
   change code and see if the book needs adjustments because of that?
-  or adjust Makefile
+  disable -Werror before it is mentioned in the book itself?
+  ...wow, i updated clang and apparently it works now.
+  I only noticed this because various other snippets before 13 should have been
+  flagged too.
+
++ fix integer comparison of different signedness in good goto example
+  Guess which compiler didn't flag this before a recent update!
+  On the 22th March of 2024, Clang has officially won the gaslighting award...
+  i am actually still not sure if i am just bad.
 
 - switch: add that you can only use numerical types in a switch
 - there are some typos around
 - nit: maybe the whole schtick of
   "types: ..., void is here but it's only useful later"
   can be solved in a better way?
+
+- add `-fsanitize` to optional end topic "Go even beyond (-Wextra)"
 
 - look for other fixes
 - set edition

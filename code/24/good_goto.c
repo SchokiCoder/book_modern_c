@@ -4,7 +4,7 @@
 
 int main(int argc, char **argv)
 {
-        const int str_size = 20;
+        const long unsigned str_size = 20;
         char *str = malloc(str_size);
 
         if (argc <= 1) {
