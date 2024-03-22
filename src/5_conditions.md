@@ -67,6 +67,11 @@ break is not set, then the next case will run as well. So forgetting the break
 statement in one case, you can prepare for the fallout of unintended variable
 manipulations down the line. The "default" branch works like the "else" branch
 in an if-chain.  
+  
+Also, just in case, remember C is a low level language, basically a thin
+abstraction over assembly (or the machine's language).  
+That means you can't just toss a string into a switch or anything that isn't a
+number.  
 
 ## Operators
 

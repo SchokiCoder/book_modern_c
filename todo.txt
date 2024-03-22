@@ -17,7 +17,8 @@
   On the 22th March of 2024, Clang has officially won the gaslighting award...
   i am actually still not sure if i am just bad.
 
-- switch: add that you can only use numerical types in a switch
++ switch: add reminder that you can only use numerical types in a switch
+
 - there are some typos around
 - nit: maybe the whole schtick of
   "types: ..., void is here but it's only useful later"
