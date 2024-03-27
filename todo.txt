@@ -1,4 +1,4 @@
-# Edition 3.1 ?
+# Edition 3.1
 
 + fix malformed goto code example (nametag being indented)
 + lessen goto discouragement a bit and add an example where it's actually useful
@@ -23,7 +23,20 @@
 
 Also update the copyright.
 
-- there are some typos around
+- fix minor writing oddities like misplaced commas, typos, formulations
+
+- setup: add a mention of the technology of VM's existing
+
+- setup: rather focus Mint in the recommendation
+  (rework sentences to be:
+   "There are hundreds of distros."
+   "Just install Mint."
+   ...
+   "Ubuntu could also be used.")
+
+- setup: editor: assume Mint which justs lists it as "Text Editor" but also mention
+  actual name "xed"
+
 - nit: maybe the whole schtick of
   "types: ..., void is here but it's only useful later"
   can be solved in a better way?

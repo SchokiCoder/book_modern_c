@@ -3,8 +3,9 @@
 ## Variables
 
 Computing is all about getting results (of calculations) and to store these
-results, we need variables. In C these need to be declared, we do that by giving
+results we need variables. In C these need to be declared, we do that by giving
 them a type and a name.  
+
 ```c
 {{ #include ../code/2/variables.c }}
 ```
@@ -12,7 +13,7 @@ them a type and a name.
 Here we declare the two variables “my_id” and "counter" of the type "int".
 After that we can save numbers in it.  
 In case of “counter” we not just declare the variable but also in the same line
-define it, by giving it a initial value.  
+define it by giving it a initial value.  
 It is very important to choose short yet fitting names, depending on their
 purposes.  
 
@@ -35,13 +36,15 @@ Numbers are not all equal. Some are bigger or smaller than the average integer.
 If you just need to store a number within a range of 0 to 100 then there is
 really no issue most of the time with any kind of integer. Now what happens if
 you need to store numbers as big as 2147483648?  
+
 ```c
 int a = 2147483648;
 ```
+
 I compiled and ran this and "a" was actually -2147483648.  
 This is because `int` does not support this value and so it had to endure an
 integer overflow. This means i added a value to "a" that is too high
-and as a result the variable flipped it's value on the head.  
+and as a result the variable flipped its value on the head.  
 This is because of the way integers are represented in memory and i will
 demonstrate it with an 8-bit value instead of an integer, because it has 32-bit
 in the case of my machine.  
@@ -51,9 +54,11 @@ in the case of my machine.
 #### Basics
 
 When we assign 0 to "num"  
+
 ```c
 unsigned char num = 0;
 ```
+
 the binary representation for it looks like this:  
 0 0 0 0 0 0 0 0
   
@@ -81,7 +86,7 @@ Now you might ask yourself "So how did that integer overflow happen?"
 
 #### Integer overflow
 
-When you continually add one to a number eventually you need another digit.  
+When you continually add one to a number, eventually you need another digit.  
 Let's visualize this with a decimal with two digits:  
 
 ```
@@ -123,9 +128,9 @@ the ability to represent negative numbers is the difference between an
 `unsigned int` and an `int` or `signed int`. The sign bit is used as an off/on
 flag for the question "Is the current value negative?" and it is the leftmost
 bit in the sequence.  
-Unfortunately it's not just that easy and the best way explain signed
-binary values is to use that counting visualization from before plus a
-representation of the decimal value in parentheses next to it.  
+Unfortunately it's not that easy and the best way to explain signed binary
+values is to use that counting visualization from before plus a representation
+of the decimal value in parentheses next to it.  
 To make signed integers efficient, their binary representation from positive to
 negative is seamless.  
 So imagine a signed binary number with three digits that we count down:  
@@ -144,11 +149,13 @@ So imagine a signed binary number with three digits that we count down:
 In order to remove one from the decimal we just remove one from the binary.  
 Same with adding.  
   
-With that in mind we can now answer the question:  
+With that in mind, we can now answer the question:  
 "Why is  
+
 ```c
 a = 2147483648;
 ```
+
 resulting in 'a' being -2147483648 on my machine?"  
   
 Because the bits flip over and accidentally activate the sign flag.  
@@ -174,6 +181,7 @@ What exactly i mean by precision is covered later.
   
 All you need to know now is that it stores fractions and that you use a point as
 a comma:  
+
 ```c
 float my_float = 22.05;
 ```
@@ -184,24 +192,28 @@ I kind of lied when i said char is _just_ a number. It technically is but there
 is more to it. In C the char is also used to represent textual characters. Char
 has a range of 256 different values it can represent and those numbers are used
 as a character. That means the following line:  
+
 ```c
 char an_a = 'a';
 ```
+
 is valid code and compiles. One important thing to note is that one char is
 always surrounded by ' but not ". What " does comes later.  
 Also please don't do this:  
+
 ```c
 char not_like_this = 'invalid';
 ```
+
 Since char can only hold one of those, this results in unforeseen
 consequences.  
 
 ### Void
 
-This type tells everyone, that it itself is not a thing.  
-One does not simply declare a variable with the type being void.  
+This type tells everyone that it itself is not a thing.  
 "Is that a joke?"  
 Well, no. It's going to be important later.  
+For now know: one does not simply declare a variable with the type being void.  
 
 ### Constants
 

@@ -7,8 +7,8 @@ You can run a live-disk from a USB-drive, which would get a bit awkward after
 some time, so better install it on that USB-drive. After that just boot from
 BIOS into that Linux-USB-drive and done.  
   
-If you go out and look for the Linux install software, then i gotta tell you,
-that's not how it works. There is not just the one Linux install-disk or
+If you go out and look for the Linux install software, i gotta tell you that's
+not how it works. There is not just the one Linux install-disk or
 something like that. Rather, there are hundreds, so don't fret over which one to
 pick, because i recommend you just use Ubuntu or Linux-Mint. They are good for
 beginners, definitively enough for the purposes of this book and are
@@ -69,7 +69,7 @@ your own.
 
 ### Windows
 
-On Windows, ditch notepad.exe and get "Notepad++" or "Visual Studio Code" i
+On Windows, ditch notepad.exe and get "Notepad++" or "Visual Studio Code", i
 guess. I would go with Notepad++ though, if i were glued to a Windows-only PC.  
 
 ## Debugger
@@ -83,9 +83,11 @@ already in your party. If not, you know the package-manager-drill.
 
 There is a good chance "gdb" comes packed with "mingw" / "Cygwin" already. If
 that is not the case, then get it from the internet. Since you are a grown
-adult, that committed to a path, you can also do the heavy lifting.  
+adult that committed to a path, you can also do the heavy lifting.  
 
 ## Make
+
+Not to be confused with cmake, that is something else.  
 
 ### Linux
 
@@ -94,5 +96,4 @@ Get "make" via package manager, if not already there.
 ### Windows
 
 Get "make" via the "Cygwin" packages, if not already there. If you don't use
-"Cygwin", then go find it on the internet. Make sure not to accidentally get
-"cmake", that is something else.  
+"Cygwin", then go find it on the internet.  
