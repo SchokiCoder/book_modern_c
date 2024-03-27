@@ -6,7 +6,7 @@ _Have a plan to debug every file you write._
   
 Wait hang on, this is not about personal procedure but rather about the
 language.  
-Oh well... still true, though.  
+Oh well... still true though.  
   
 The C programming language was created in the 1970's and it didn't just sit
 there rusting away. The language exists within standards, which have been

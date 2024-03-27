@@ -43,8 +43,8 @@ burns, leaving you with a `Segmentation fault` in console.
 Now were gonna make a pointer have it's own variable... kinda.  
 Normally the operating system gives us plenty of memory to work with in the
 stack.  
-Sometimes programs do some heavier tasks so that won't work.  
-Use more memory.  
+Sometimes programs need to do some heavier tasks.  
+So if that won't work... use more memory.  
 
 ```c
 {{ #include ../code/15/malloc.c }}
@@ -73,3 +73,45 @@ that.
 In the malloc-call we now need to multiplicate the size of an integer with the
 amount of elements we want to have. Also with that constant we keep track of how
 many elements we have.  
+
+## Skill issues
+
+Happens to everyone.  
+Allocating memory or working with pointers at all is a huge can of worms.  
+Using memory after it's freed, using uninitialized pointers... and listing
+everything that could go wrong with pointers would allow me to add 2 full pages.  
+How to mitigate a lot of headaches?  
+Add the compiler option `-fsanitize=address,undefined`.  
+This doesn't magically compile your skill issues away but it will tell you what
+you did wrong. Sadly only at runtime of the compiled program but better than
+nothing.  
+  
+If we alter the above malloc example to instead have no actual memory under the
+pointer:
+
+```c
+{{ #include ../code/15/fsanitized.c }}
+```
+
+Running the program will instead cause a giant error message:
+
+```
+15/fsanitized.c:9:14: runtime error: store to null pointer of type 'int'
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==9038==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x000000401204 bp 0x7ffc37c1f570 sp 0x7ffc37c1f560 T0)
+==9038==The signal is caused by a WRITE memory access.
+==9038==Hint: address points to the zero page.
+    #0 0x401204 in main 15/fsanitized.c:9
+    #1 0x7fbd3f446149 in __libc_start_call_main (/lib64/libc.so.6+0x28149) (BuildId: 7ea8d85df0e89b90c63ac7ed2b3578b2e7728756)
+    #2 0x7fbd3f44620a in __libc_start_main_impl (/lib64/libc.so.6+0x2820a) (BuildId: 7ea8d85df0e89b90c63ac7ed2b3578b2e7728756)
+    #3 0x4010d4 in _start (/home/andy/projects/c_50_years_old_foundation/code/15/fsanitized+0x4010d4) (BuildId: 7461208b2d8e3cacb382b1febc77b6d6526bf2a8)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV 15/fsanitized.c:9 in main
+==9038==ABORTING
+```
+
+This is very appealing, because it tells us what went wrong
+`store to null pointer` and where it went wrong with a backtrace
+`in main 15/fsanitized.c:9`.  

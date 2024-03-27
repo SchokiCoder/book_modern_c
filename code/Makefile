@@ -15,7 +15,7 @@ TARGETS=1/barebones \
 	10/sane 10/insane 10/gnu \
 	12/include.o 12/floatstuff.o 12/intstuff.o \
 	14/globals \
-	15/return_parameter 15/malloc 15/const_size \
+	15/return_parameter 15/malloc 15/const_size 15/fsanitized \
 	17/messenger 17/typedef \
 	18/enum 18/enum_vals.o \
 	19/flip 19/data_loss 19/implicit \
@@ -27,7 +27,7 @@ TARGETS=1/barebones \
 
 all: $(TARGETS)
 
-clean:		
+clean:
 	rm -f $(TARGETS)
 	rm -f */*.o
 
@@ -130,9 +130,12 @@ clean:
 
 15/malloc: 15/malloc.c
 	$(CC) ${COPTS} -o $@ $^
-	
+
 15/const_size: 15/const_size.c
 	$(CC) ${COPTS} -Wno-uninitialized -o $@ $^
+
+15/fsanitized: 15/fsanitized.c
+	$(CC) $(COPTS) -fsanitize=address,undefined -o $@ $^
 
 17/messenger: 17/messenger.c
 	$(CC) ${COPTS} -o $@ $^

@@ -19,15 +19,17 @@
 
 + switch: add reminder that you can only use numerical types in a switch
 
++ add `-fsanitize` to pointer chapter
+
+Also update the copyright.
+
 - there are some typos around
 - nit: maybe the whole schtick of
   "types: ..., void is here but it's only useful later"
   can be solved in a better way?
 
-- add `-fsanitize` to optional end topic "Go even beyond (-Wextra)"
-
 - look for other fixes
-- set edition
+- set edition in cover
 
 -----
 
