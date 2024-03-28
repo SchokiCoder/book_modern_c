@@ -1,18 +1,18 @@
 # Functions
 
-A function is a sequence of code, that you can call at any moment. You can
-define a function, in a way to take data and return data. Data taken by a
+A function is a sequence of code that you can call at any moment. You can
+define a function that takes data and or returns data. Data taken by a
 function is called arguments or parameters. The parameters are only copies of
 the original data. You can give a function as many parameters as you like but a
-function can only return one value. To call a function write it's name and put
+function can only return one value. To call a function, write it's name and put
 parentheses next to it.  
-Within the parentheses of the function call comes the data.  
+Within the parentheses of the function call are the values for the parameters.  
 
 ```c
 {{ #include ../code/3/functions.c }}
 ```
 
-As a side-note: we return a number from main, to tell the operating system,
+As a side-note, we return a number from main to tell the operating system,
 which is practically calling our main function, if our program ran as expected
 or if it had some trouble.  
 A zero means everything is a-OK.  

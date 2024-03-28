@@ -31,11 +31,11 @@ Here are all common arithmetic operators:
 | a % b                 | the remainder of a divided by b | modulo      |
 
 It is also common that a variable needs to be reduced or increased by 1.  
-This is called decrementing and incrementing respectively and comes with it's
+This is called decrementing and incrementing respectively and comes with its
 own operators.  
 ++ for incrementing and  
 -- for decrementing.  
-Theoretically it is important where this operator is relative to its variable
+Theoretically, it is important where this operator is relative to its variable,
 but in practice this rarely comes up.  
 
 ```c
@@ -44,24 +44,24 @@ but in practice this rarely comes up.
 
 Postfix (`a++`) and prefix (`++a`) are both valid and do something slightly
 different.  
-Every time you do increment "num" you also get the result returned. The
-difference is, that the result is returned either before or after incrementing
-or decrementing.  
+Every time "a" is incremented the result is returned.  
+The difference is that the result is returned after and before incrementing
+respectively.  
 
 ```c
 {{ #include ../code/4/increment_return.c }}
 ```
 
-When the increment operator is on the right side (postfix), then we first
-assign the value of "num" to "before" and then increment "num". If the operator
-is on the left side (prefix) it's done the other way around.  
-So after this, this is how all variables look like:  
+When the increment operator is on the right side (postfix), we first assign the
+value of "num" to "before" and then increment "num".  
+If the operator is on the left side (prefix) it's done the other way around.  
+So after that, this is how all variables look like:  
 num : 2  
 before : 0  
 after : 2  
   
-As mentioned though, this will rarely come up but keep it in mind just in
+As already mentioned, this will rarely come up, but keep it in mind just in
 case.  
   
-Now for the next wave of operators, i think it is fitting to move to the next
+As for the next wave of operators, i think it is fitting to move on to the next
 topic.  

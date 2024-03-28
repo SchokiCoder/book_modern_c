@@ -25,6 +25,8 @@ Also update the copyright.
 
 - fix minor writing oddities like misplaced commas, typos, formulations
 
+Also add how booleans are abstractions.
+
 - setup: add a mention of the technology of VM's existing
 
 - setup: rather focus Mint in the recommendation
@@ -36,6 +38,12 @@ Also update the copyright.
 
 - setup: editor: assume Mint which justs lists it as "Text Editor" but also mention
   actual name "xed"
+
+- add bit shift to optional end topics?
+  (if so, say "Remember that i listed **all** the operators earlier in the
+   operators chapter? I lied again... oops. One could almost say that I cut some
+   uncomfortable truths to improve the learning experience.
+   Anyway, here are the missing operators...")
 
 - nit: maybe the whole schtick of
   "types: ..., void is here but it's only useful later"
