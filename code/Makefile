@@ -10,7 +10,7 @@ TARGETS=1/barebones \
 	5/if 5/else 5/else_if 5/no_brackets 5/switch 5/boolean 5/logical \
 	6/while 6/do_while 6/for 6/loop_control \
 	7/printf \
-	8/array \
+	8/array 8/array_c99 \
 	9/comments 9/genius 9/self_explanatory \
 	10/sane 10/insane 10/gnu \
 	12/include.o 12/floatstuff.o 12/intstuff.o \
@@ -86,7 +86,10 @@ clean:
 	$(CC) ${COPTS} -o $@ $^
 
 8/array: 8/array.c
-	$(CC) ${COPTS} -o $@ $^
+	$(CC) ${COPTS} -std=c90 -pedantic -o $@ $^
+
+8/array_c99: 8/array_c99.c
+	$(CC) ${COPTS} -pedantic  -o $@ $^
 
 9/comments: 9/comments.c
 	$(CC) ${COPTS} -o $@ $^

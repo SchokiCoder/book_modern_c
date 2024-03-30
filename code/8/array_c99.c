@@ -2,13 +2,13 @@
 
 int main(void)
 {
-        int array[4];
+        int array[] = {
+                [0] = 1,
+                [1] = 1,
+                [2] = 2,
+                [3] = 3
+        };
         int i;
-
-        array[0] = 1;
-        array[1] = 1;
-        array[2] = 2;
-        array[3] = 3;
 
         for (i = 0; i < 4; i++) {
                 printf("i: %i; val: %i\n", i, array[i]);

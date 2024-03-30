@@ -23,11 +23,13 @@
 
 Also update the copyright.
 
++ add how booleans are abstractions
+
++ add c99 array initialization 
+
 - fix minor writing oddities like misplaced commas, typos, formulations
 
-Also add how booleans are abstractions.
-
-- setup: add a mention of the technology of VM's existing
+- setup: add a mention of the technology of VMs existing
 
 - setup: rather focus Mint in the recommendation
   (rework sentences to be:
