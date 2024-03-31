@@ -11,7 +11,7 @@ bool verify_arg(const char *str)
                 return false;
 
         switch (str[1]) {
-        case 'A':                // fallthrough
+        case 'A': /* fallthrough */ 
         case 'h':
         case 'z':
         case 'Z':
