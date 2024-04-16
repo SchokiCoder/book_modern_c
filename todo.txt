@@ -27,7 +27,7 @@ Also update the copyright.
 
 + add c99 array initialization 
 
-- fix minor writing oddities like misplaced commas, typos, formulations
++ fix minor writing oddities like misplaced commas, typos, formulations
 
 - setup: add a mention of the technology of VMs existing
 
