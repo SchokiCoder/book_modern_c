@@ -29,17 +29,9 @@ Also update the copyright.
 
 + fix minor writing oddities like misplaced commas, typos, formulations
 
-- setup: add a mention of the technology of VMs existing
++ setup: recommend Linux Mint more and reflect that in the text editor part
 
-- setup: rather focus Mint in the recommendation
-  (rework sentences to be:
-   "There are hundreds of distros."
-   "Just install Mint."
-   ...
-   "Ubuntu could also be used.")
-
-- setup: editor: assume Mint which justs lists it as "Text Editor" but also mention
-  actual name "xed"
+Also replace weird running from USB bit with just using virtualization bit.
 
 - add bit shift to optional end topics?
   (if so, say "Remember that i listed **all** the operators earlier in the

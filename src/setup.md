@@ -3,24 +3,28 @@
 First you want to make sure to install Linux… no?  
 Look mate, you don't have to commit to it in a way of permanently replacing your
 current OS.  
-You can run a live-disk from a USB-drive, which would get a bit awkward after
-some time, so better install it on that USB-drive. After that just boot from
-BIOS into that Linux-USB-drive and done.  
+You can use VirtualBox, or WSL if you are on MS Windows, which would also take
+care of the next step of choosing a distro.  
   
 If you go out and look for the Linux install software, i gotta tell you that's
 not how it works. There is not just the one Linux install-disk or
-something like that. Rather, there are hundreds, so don't fret over which one to
-pick, because i recommend you just use Ubuntu or Linux-Mint. They are good for
-beginners, definitively enough for the purposes of this book and are
-DEBIAN-BASED:  
+something like that. Rather, there are hundreds,
+which is what we call distributions or distros,
+but don't fret over which one to pick,
+because i recommend you just use Linux Mint.
+It is good for beginners, definitively enough for the purposes of this book,
+and it's DEBIAN-BASED:  
 <https://linuxmint.com/download.php>  
+
+Ubuntu could also be used:  
 <https://ubuntu.com/desktop>  
   
 Still not? Alright okay. If you are interested in programming, i can only
 recommend it though.  
 Keep in mind, this book is written mainly for Linux and the "gcc" compiler.  
-So the setup phase can be difficult and the reading experience can be
-hampered.  
+So the setup phase can be difficult, and the reading experience can be
+hampered, if you diverge.  
+Seriously, at least use a virtual machine.  
 
 ## Compiler
 
@@ -60,11 +64,16 @@ A **good** editor is the next thing on the list.
 
 ### Linux
 
-Most Linux distros come with a very basic editor already. For example "gedit",
-"mousepad" or "kate".  
-Find your editor and make sure it has a feature called "syntax highlighting"
-and that it is enabled. If you don't have any editor with syntax highlighting,
-install one of the aforementioned ones via your package manager or find one on
+Linux Mint comes with a very basic editor already.
+Just look for "Text Editor" in the application menu.
+You may also find it as "xed", "mousepad" or "pluma",
+depending on the chosen edition.  
+They all come with "syntax highlighting". Make sure it is enabled.
+Other helpful visual aids such as "Highlight matching brackets",
+"Highlight the current line", "Display line numbers",
+and many more should be kept in mind.  
+If you don't have any editor with syntax highlighting,
+install one of the aforementioned ones via your package manager, or find one on
 your own.  
 
 ### Windows
