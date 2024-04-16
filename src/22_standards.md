@@ -8,7 +8,7 @@ Wait hang on, this is not about personal procedure but rather about the
 language.  
 Oh well... still true though.  
   
-The C programming language was created in the 1970's and it didn't just sit
+The C programming language was created in the 1970s, and it didn't just sit
 there rusting away. The language exists within standards, which have been
 released over the years.  
   
@@ -28,8 +28,8 @@ generics... kind of:
 {{ #include ../code/22/generics.c }}
 ```
 
-This macro basically reroutes your "add" call to the according "addi" and "addf"
-functions based on the type of your first parameter.  
+This macro basically reroutes your "add" call to the according "addi" or "addf"
+functions, depending on the type of your first parameter.  
   
 When compiling with gcc you pick a standard with the "-std=cXX" compiler option.
 XX being the standard's version like "c99".  
