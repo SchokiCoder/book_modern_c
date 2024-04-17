@@ -11,9 +11,9 @@ if you want more of a challenge.
   
 Don't get discouraged by the compiler telling you what is wrong, or by people,
 in case you ask for help via the internet.  
-Stay humble and remember that you are probably not the best software-developer
-around, but you can always improve, and you can always enjoy your journey.  
-_(Plus 10 points, if you get this reference.)_
+"It's important to be humble, and remember that you are probably not the best
+around, but you can always improve, and you can always enjoy that process."  
+_-LazyPurple_
   
 Don't be afraid to ask people for help, it can save a lot of stress. How
 complicated a program can get once it uses heap-memory or threads
@@ -60,3 +60,5 @@ together and compliment each other.
 So go out there, automate some tedious processes with any programming language,
 a shell script, or some file workflow related business with a well written
 Makefile, and tell them Schoki sent you.  
+
+_Plus 10 points for every reference you get ;)_

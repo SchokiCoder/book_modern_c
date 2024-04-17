@@ -33,6 +33,9 @@ Also update the copyright.
 
 Also replace weird running from USB bit with just using virtualization bit.
 
++ promote lazypurple reference to a straight quote
+- more fixing in chapters 1 to 8?
+
 - add bit shift to optional end topics?
   (if so, say "Remember that i listed **all** the operators earlier in the
    operators chapter? I lied again... oops. One could almost say that I cut some
