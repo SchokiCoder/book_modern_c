@@ -3,8 +3,8 @@
 A function is a sequence of code that you can call at any moment. You can
 define a function that takes data and or returns data. Data taken by a
 function is called arguments or parameters. The parameters are only copies of
-the original data. You can give a function as many parameters as you like but a
-function can only return one value. To call a function, write it's name and put
+the original data. You can give a function as many parameters as you like, but a
+function can only return one value. To call a function write its name and put
 parentheses next to it.  
 Within the parentheses of the function call are the values for the parameters.  
 
@@ -26,5 +26,5 @@ void my_fun(void) { ... }
 ```
 
 This also allows you to define the function without having to use the "return"
-keyword but you can still use it in case you need to quit from a function
+keyword, but you can still use it in case you need to quit from a function
 early.  

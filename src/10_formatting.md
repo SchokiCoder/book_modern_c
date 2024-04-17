@@ -7,7 +7,7 @@ Formatting and comments are the most important things in the realm of
 programming. If nobody is able to read your code, no one will want to work with
 you. Given enough time, not even you yourself.  
   
-I hope i can make my point clear, when quickly demonstrating that:  
+I hope I can make my point clear, when quickly demonstrating that:  
 
 ```c
 {{ #include ../code/10/sane.c }}

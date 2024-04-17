@@ -6,7 +6,7 @@ program, by changing your call from
 to just:  
 `make`  
   
-At first you might say: "No problem, i just have to type it once,
+At first you might say: "No problem, I just have to type it once,
 and then get it back with my arrow keys."  
 That statement will be proven wrong in this chapter,
 unless you write some small source file, and work with it for just one session.  
@@ -26,15 +26,15 @@ debug-build, but also the one for the release-build.
   
 So that is where `make`'s Makefiles come in:  
 _Disclaimer: We unpack this all in a second. Feel free to skip to the part
-where i explain it to you immediately._
+where I explain it to you immediately._
 
 ```Makefile
 {{ #include ../code/13/Makefile }}
 ```
 
-## The part where i explain it to you
+## The part where I explain it to you
 
-This is the part where i explain it to you.  
+This is the part where I explain it to you.  
   
 Let's unpack this from top to bottom.  
 This Makefile creates two binaries from the code files "main.c", "lib.h", and
@@ -91,7 +91,7 @@ Makefiles have to be named "Makefile" or "makefile" to be used by the bare
 Then it builds the first target, unless you specify which target, by just
 dumping its name after the `make` command.  
   
-"... Oh, hang on... jeez, that was so much i almost forgot to ask:  
+"... Oh, hang on... jeez, that was so much I almost forgot to ask:  
  What is with that 'clean' branch you presented at the bottom of the file?"  
   
 Oh yeah. The clean branch never really creates a file called "clean"...  

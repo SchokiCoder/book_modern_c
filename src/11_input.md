@@ -15,7 +15,7 @@ I encourage you to find them, and play around for a bit.
 
 ## No running in the hallways
 
-One thing i want to mention is that input is like... a very dangerous pair of
+One thing I want to mention is that input is like... a very dangerous pair of
 scissors... and you shouldn't run with scissors.  
 For as much fun they can bring into an application, it can also make you your
 own worst enemy.  

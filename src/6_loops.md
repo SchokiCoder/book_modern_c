@@ -4,7 +4,7 @@ Important for a lot of things. In the upcoming example we have 3 integers, all
 set to 1. With `while (condition)` we start a loop. This loop runs as long as
 "a" is smaller than 100. Within every run of that loop we store the value of "b"
 in "c", then "a" in "b", and then we calculate a new "a" by summing "b" and "c".
-Thanks to the starting values of those 3 variables, we can ensure that "a"
+Thanks to the starting values of these 3 variables, we can ensure that "a"
 will increase over time, and the loop eventually exits.  
 
 ```c
@@ -18,7 +18,7 @@ There are 3 kinds of loops in C:
 - do while
 - for
 
-"do while" loops are similar to "while". The difference is, that the loop first
+"do while" loops are similar to "while". The difference is that the loop first
 runs its body, and then it checks the condition in the head, or in this case
 foot.  
 
@@ -29,7 +29,7 @@ foot.
 In my experience, this is the least used loop, but definitely not useless. You
 will know when you need it.  
 "for" loops on the other hand are the most used loop, at least for me. A for
-loop has bit more complex header, in which you have one statement that runs
+loop has a more complex header, in which you have one statement that runs
 before the loop starts, the condition, and a statement that runs each time
 after the loop body ran.  
 
@@ -37,12 +37,12 @@ after the loop body ran.
 {{ #include ../code/6/for.c }}
 ```
 
-Before this for loop runs, we set the integer i to 0, separate that statement
+Before this for loop runs, we set the integer "i" to 0, separate that statement
 with a semicolon to put the condition, and after that comes the statement that
 runs after every loop run.  
 We practically just made a counter variable for this very loop.  
 The name "i" is absolutely the standard for a counter in a for loop. No one will
-complain about it, because "i" stands for iterator and it's common practice.  
+complain about it, because "i" stands for iterator, and it's common practice.  
 
 ## controlling the loop
 

@@ -19,7 +19,7 @@ Don't be afraid to ask people for help, it can save a lot of stress. How
 complicated a program can get once it uses heap-memory or threads
 is well known by a lot of people. Especially with the C programming language.  
   
-Speaking of journey, i want to remind that C was featured here only for the sake
+Speaking of journey, I want to remind that C was featured here only for the sake
 of teaching. In case you grew attached to this language, remember that you can
 like flawed things such as this language, but don't let your preference cloud
 your vision on reality.  
@@ -38,7 +38,7 @@ is a bit unorthodox.
 If you want a more modern language that is in a technical sense closer to C,
 check Zig out.  
 At the time of writing this, it is not yet production ready,
-but i am pretty sure they will get there.  
+but I am pretty sure they will get there.  
 <https://ziglang.org>  
   
 If you want a low-level language, that produces more stable binaries, consider

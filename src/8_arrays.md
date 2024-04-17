@@ -1,13 +1,13 @@
 # Arrays
 
-An array is way to hold a lot of variables in one name.  
+An array is way to hold a lot of variables under one name.  
 
 ```c
 {{ #include ../code/8/array.c }}
 ```
 
 When brackets follow the variable name in the declaration, you get an array.  
-Place a number within the brackets, the array will hold that many elements.  
+Place a number within the brackets, and the array will hold that many elements.  
 Since the first element is addressed by 0, the last element will be addressed
 with a 3 in this case.  
 When accessing a value of an array, see the number in brackets as an offset

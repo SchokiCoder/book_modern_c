@@ -2,8 +2,8 @@
 
 ## Variables
 
-Computing is all about getting results (of calculations) and to store these
-results we need variables. In C these need to be declared, we do that by giving
+Computing is all about getting results (of calculations), and to store these
+results we need variables. In C these need to be declared. We do that by giving
 them a type and a name.  
 
 ```c
@@ -12,7 +12,7 @@ them a type and a name.
 
 Here we declare the two variables “my_id” and "counter" of the type "int".
 After that we can save numbers in it.  
-In case of “counter” we not just declare the variable but also in the same line
+In case of “counter” we not just declare the variable, but also in the same line
 define it by giving it a initial value.  
 It is very important to choose short yet fitting names, depending on their
 purposes.  
@@ -22,9 +22,9 @@ purposes.
 ### Integer
 
 The previously mentioned type “int” is the most common type in overall
-programming and represents a number. Its full name is “integer”, but don’t use
+programming, and represents a number. Its full name is “integer”, but don’t use
 that in your code.  
-There are many similar types like “unsigned int”, “short” and “char”, which are
+There are many similar types like “unsigned int”, “short”, and “char”, which are
 all numbers.  
   
 "But why do we need types in the first place? Wouldn't things be much simpler
@@ -33,21 +33,21 @@ Short answer: No.
 Long answer: Hell, no. Types exist so that every developer and the compiler know
 what exactly your plan regarding that variable is.  
 Numbers are not all equal. Some are bigger or smaller than the average integer.
-If you just need to store a number within a range of 0 to 100 then there is
-really no issue most of the time with any kind of integer. Now what happens if
+If you just need to store a number within a range of 0 to 100,
+using just an `int` is fine, as it is in most cases. Now what happens if
 you need to store numbers as big as 2147483648?  
 
 ```c
 int a = 2147483648;
 ```
 
-I compiled and ran this and "a" was actually -2147483648.  
-This is because `int` does not support this value and so it had to endure an
-integer overflow. This means i added a value to "a" that is too high
+I compiled and ran this, and "a" was actually -2147483648.  
+This is because `int` does not support this value, and so it had to endure an
+integer overflow. This means I added a value to "a" that is too high,
 and as a result the variable flipped its value on the head.  
-This is because of the way integers are represented in memory and i will
-demonstrate it with an 8-bit value instead of an integer, because it has 32-bit
-in the case of my machine.  
+This is because of the way integers are represented in memory, and I will
+demonstrate it with an 8-bit value instead of an integer,
+because ints have 32-bit in the case of my machine.  
 
 ### Binary shenanigans
 
@@ -62,7 +62,7 @@ unsigned char num = 0;
 the binary representation for it looks like this:  
 0 0 0 0 0 0 0 0
   
-We now add 1 to "num"  
+We now add 1 to "num",  
 num = num + 1;  
 and it changes as follows:  
 0 0 0 0 0 0 0 1  
@@ -123,14 +123,14 @@ We add to the next digit (that doesn't exist) and set everything before that to
 
 #### Signed integers
 
-Negative numbers are represented in a slightly different way but first of all,
+Negative numbers are represented in a slightly different way, but first of all,
 the ability to represent negative numbers is the difference between an
 `unsigned int` and an `int` or `signed int`. The sign bit is used as an off/on
-flag for the question "Is the current value negative?" and it is the leftmost
+flag for the question "Is the current value negative?", and it is the leftmost
 bit in the sequence.  
-Unfortunately it's not that easy and the best way to explain signed binary
+Unfortunately it's not that easy, and the best way to explain signed binary
 values is to use that counting visualization from before plus a representation
-of the decimal value in parentheses next to it.  
+of the decimal value (in parentheses next to it).  
 To make signed integers efficient, their binary representation from positive to
 negative is seamless.  
 So imagine a signed binary number with three digits that we count down:  
@@ -146,7 +146,7 @@ So imagine a signed binary number with three digits that we count down:
 100  (-4)
 ```
 
-In order to remove one from the decimal we just remove one from the binary.  
+In order to remove one from the decimal, we just remove one from the binary.  
 Same with adding.  
   
 With that in mind, we can now answer the question:  
@@ -158,7 +158,7 @@ a = 2147483648;
 
 resulting in 'a' being -2147483648 on my machine?"  
   
-Because the bits flip over and accidentally activate the sign flag.  
+Because the bits flip over, and accidentally activate the sign flag.  
 See 2147483647 + 1:  
 
 ```
@@ -167,20 +167,22 @@ See 2147483647 + 1:
 ```
 
   
-Now you can see why it is important to know exactly which integer you want. To
-store the numbers you need, because each of them can store numbers within a
+Now you can see why it is sometimes important to know
+exactly which integer you want.  
+To store the numbers you need, because each of them can store numbers within a
 different range.  
+Using a plain `int` will suffice, if there is no special need.  
 
 ### Float
 
 Floats are used to store fractions.  
 There are two types: "float" and "double".  
-Double having double the size of a float and with that it can store twice the
+Double having double the size of a float, and with that it can store twice the
 precision.  
-What exactly i mean by precision is covered later.  
+What exactly I mean by precision is covered later.  
   
-All you need to know now is that it stores fractions and that you use a point as
-a comma:  
+All you need to know now is that it stores fractions,
+and that you use a point as the decimal separator:  
 
 ```c
 float my_float = 22.05;
@@ -188,16 +190,16 @@ float my_float = 22.05;
 
 ### Char
 
-I kind of lied when i said char is _just_ a number. It technically is but there
+I kind of lied when I said char is _just_ a number. It technically is, but there
 is more to it. In C the char is also used to represent textual characters. Char
-has a range of 256 different values it can represent and those numbers are used
-as a character. That means the following line:  
+has a range of 256 different values it can represent, and those numbers are used
+as different characters. That means the following line:  
 
 ```c
 char an_a = 'a';
 ```
 
-is valid code and compiles. One important thing to note is that one char is
+is valid code that compiles. One important thing to note is that one char is
 always surrounded by ' but not ". What " does comes later.  
 Also please don't do this:  
 
@@ -205,19 +207,18 @@ Also please don't do this:
 char not_like_this = 'invalid';
 ```
 
-Since char can only hold one of those, this results in unforeseen
-consequences.  
+Since char can only hold one of these, this results in unforeseen consequences.  
 
 ### Void
 
 This type tells everyone that it itself is not a thing.  
 "Is that a joke?"  
-Well, no. It's going to be important later.  
-For now know: one does not simply declare a variable with the type being void.  
+Well no. It's going to be important later.  
+For now know: one does not simply declare a variable of the void type.  
 
 ### Constants
 
-They are like variables but immutable. To declare a constant put "const" at the
+They are like variables, but immutable. To declare a constant put "const" at the
 beginning.  
 
 ```c

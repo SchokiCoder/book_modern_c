@@ -122,7 +122,7 @@ memorizing what every variable should hold at that point.
 
 ## How to not debug
 
-I hope that i could make clear how valuable the debugger is.  
+I hope that I could make clear how valuable the debugger is.  
 Beginners like to debug in different way. Before they learn how powerful a
 debugger is, or that it exists.  
 Maybe you also already did that so far. I wouldn't blame you if you did. In that
@@ -146,7 +146,7 @@ This _can_ work at first, but it has quite a few shortcomings:
 - you may get a new bug because of the print
 - it is slower to do
 
-"Wait that last one is not true, i can add all my 'printf' calls in 10 seconds
+"Wait that last one is not true, I can add all my 'printf' calls in 10 seconds
 flat."  
 Yes, you can but when is your debugging really done with just a few print
 calls?  

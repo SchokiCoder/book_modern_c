@@ -6,12 +6,12 @@ current OS.
 You can use VirtualBox, or WSL if you are on MS Windows, which would also take
 care of the next step of choosing a distro.  
   
-If you go out and look for the Linux install software, i gotta tell you that's
+If you go out and look for the Linux install software, I gotta tell you that's
 not how it works. There is not just the one Linux install-disk or
 something like that. Rather, there are hundreds,
 which is what we call distributions or distros,
 but don't fret over which one to pick,
-because i recommend you just use Linux Mint.
+because I recommend you just use Linux Mint.
 It is good for beginners, definitively enough for the purposes of this book,
 and it's DEBIAN-BASED:  
 <https://linuxmint.com/download.php>  
@@ -19,7 +19,7 @@ and it's DEBIAN-BASED:
 Ubuntu could also be used:  
 <https://ubuntu.com/desktop>  
   
-Still not? Alright okay. If you are interested in programming, i can only
+Still not? Alright okay. If you are interested in programming, I can only
 recommend it though.  
 Keep in mind, this book is written mainly for Linux and the "gcc" compiler.  
 So the setup phase can be difficult, and the reading experience can be
@@ -47,7 +47,7 @@ system):
 
 ### Windows
 
-On Windows, i recommend you to get "Cygwin".  
+On Windows, I recommend you to get "Cygwin".  
 It will provide a Linux like environment, for you to use:  
 <https://www.cygwin.com>  
 It will also come with the needed compiler or give you the option to patch it
@@ -79,7 +79,7 @@ your own.
 ### Windows
 
 On Windows, ditch notepad.exe and get "Notepad++" or "Visual Studio Code", i
-guess. I would go with Notepad++ though, if i were glued to a Windows-only PC.  
+guess. I would go with Notepad++ though, if I were glued to a Windows-only PC.  
 
 ## Debugger
 
