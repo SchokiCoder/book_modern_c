@@ -12,7 +12,7 @@ Programming Language, a 50 years old foundation
 
 <p style="text-align: center; margin: 20px 0px 0px 0px">
 An introduction to everyone, whom never interfaced a compiler before.<br>
-Edition WIP
+Edition 3.1
 </p>
 
 ## License

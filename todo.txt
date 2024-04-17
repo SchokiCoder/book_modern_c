@@ -1,3 +1,5 @@
+-----
+
 # Edition 3.1
 
 + fix malformed goto code example (nametag being indented)
@@ -37,22 +39,23 @@ Also replace weird running from USB bit with just using virtualization bit.
 
 + fix minor writing oddities like misplaced commas, typos, formulations
 
-- add bit shift to optional end topics?
++ add bit shift to optional end topics? Nah too niche
   (if so, say "Remember that i listed **all** the operators earlier in the
    operators chapter? I lied again... oops. One could almost say that I cut some
    uncomfortable truths to improve the learning experience.
    Anyway, here are the missing operators...")
 
-- nit: maybe the whole schtick of
++ nit: maybe the whole schtick of
   "types: ..., void is here but it's only useful later"
   can be solved in a better way?
+  Eh whatever
 
-- look for other fixes
-- set edition in cover
++ set edition to 3.1
 
------
 
-3rd edition {
+
+3rd edition
+{
  	-memory, please: fix typo "work" -> "works"	v
  	-comments: fix typo "print" -> "printf"		v
  	-namespaces: improve wording of first sentence	v
