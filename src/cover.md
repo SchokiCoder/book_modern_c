@@ -11,8 +11,8 @@ Programming Language, a 50 years old foundation
 </h1>
 
 <p style="text-align: center; margin: 20px 0px 0px 0px">
-An introduction to everyone, whom never interfaced a compiler before.<br>
-Edition 3.1
+Introducing thee to the compiler, if it has not happened already.<br>
+Edition 3.2
 </p>
 
 ## License

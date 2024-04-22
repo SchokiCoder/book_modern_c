@@ -1,6 +1,6 @@
 # The C programming language, a 50 years old foundation
 
-An introduction to everyone, whom never interfaced a compiler before.
+Introducing thee to the compiler, if it has not happened already.  
 
 This book is for people who never programmed before but want to learn it at a
 lower level.

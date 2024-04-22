@@ -16,7 +16,7 @@ around, but you can always improve, and you can always enjoy that process."
 _-LazyPurple_
   
 Don't be afraid to ask people for help, it can save a lot of stress. How
-complicated a program can get once it uses heap-memory or threads
+complicated a program can get once it uses heap memory or threads
 is well known by a lot of people. Especially with the C programming language.  
   
 Speaking of journey, I want to remind that C was featured here only for the sake
@@ -29,26 +29,26 @@ a guy who has a strong emotional attachment to this language.
   
 If you want to first try a simpler language that looks C-ish but is easier to
 steer, consider Go.  
-Please note that this language is not so much oriented towards low-level system
+Please note that this language is not so much oriented towards low level system
 programming.  
-Writing an operating system or a performance-heavy game in Go while possible,
+Writing an operating system or a performance heavy game in Go while possible,
 is a bit unorthodox.  
 <https://go.dev>  
   
 If you want a more modern language that is in a technical sense closer to C,
 check Zig out.  
 At the time of writing this, it is not yet production ready,
-but I am pretty sure they will get there.  
+but I am pretty sure that they will get there.  
 <https://ziglang.org>  
   
-If you want a low-level language, that produces more stable binaries, consider
+If you want a low level language that produces more stable binaries, consider
 using Rust.  
 However the path of a rustacean is not an easy trail to walk.  
 <https://www.rust-lang.org>  
 
 At least try these languages out over the years.  
   
-If the above didn't hook you, then maybe one of the many good languages out
+If the above didn't hook you, maybe one of the many good languages out
 there will do. Just try some out, and do research for what your application
 needs before choosing a language. You could make a game in 100% Python or a
 website in C++, but that doesn't mean it makes sense to do so.  
